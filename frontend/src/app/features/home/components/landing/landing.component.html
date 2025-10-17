@@ -1,0 +1,89 @@
+<app-navbar />
+<div class="main">
+  <section class="hero row gy-4">
+    <div
+      class="col-12 col-lg-6 hero-left text-center d-flex flex-column justify-content-center gap-4"
+    >
+      <img src="../../../../assets/eclipse.png" alt="" class="eclipse" />
+      <h2>
+        Up Your <strong>Skills</strong> To <strong>Advance</strong> Your
+        <strong>Career</strong> Path
+      </h2>
+      <div>
+        <button class="btn start" (click)="goToCourses()">Get Started</button>
+      </div>
+    </div>
+    <div class="col-12 col-lg-6 img-container">
+      <div class="imageholder">
+        <img src="../../../../assets/student.png" alt="" class="img-student" />
+        <div class="img-des courses">
+          <img src="../../../../assets/loader.png" alt="" class="img-loader" />
+          <strong [appCountUp]="77" [suffix]="'+'"></strong>
+          <small>Online Courses</small>
+        </div>
+        <div class="img-des videos gap-2">
+          <img src="../../../../assets/video.png" alt="" class="img-loader" />
+          <div class="d-flex flex-column">
+            <strong [appCountUp]="90" [suffix]="'+'"></strong>
+
+            <small>Videos</small>
+          </div>
+        </div>
+        <div class="img-des tutors gap-2">
+          <img src="../../../../assets/tutor.png" alt="" class="img-loader" />
+          <div class="d-flex flex-column">
+            <small>Tutors</small>
+            <strong [appCountUp]="99" [suffix]="'+'"></strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="success d-flex flex-column align-items-center">
+    <div class="success-text">
+      <h3 class="text-center">Our <strong>Success</strong></h3>
+      <p class="text-center">
+        With thousands of students enrolled and countless courses completed, we
+        are proud to be a part of every learner's journey to success.
+      </p>
+    </div>
+    <div class="success-text-scroll d-flex">
+      <div>
+        <strong [appCountUp]="15" [suffix]="'K+'"></strong>
+        <p class="text-center">Students</p>
+      </div>
+      <div>
+        <strong [appCountUp]="75" [suffix]="'%'"></strong>
+        <p class="text-center">Success</p>
+      </div>
+
+      <div>
+        <strong [appCountUp]="35" [suffix]="'+'"></strong>
+        <p class="text-center">Experts</p>
+      </div>
+      <div>
+        <strong [appCountUp]="16" [suffix]="'yrs'"></strong>
+        <p class="text-center">Experience</p>
+      </div>
+    </div>
+  </section>
+  <section class="tools row">
+    <div class="col-12 col-lg-6 d-flex flex-column justify-content-center">
+      <div class="tools-text">
+        <h2 class="text-center">
+          Tools For <strong>Teachers</strong> And <strong>Learners</strong>
+        </h2>
+        <p class="text-center">
+          Class has a dynamic set of teaching tools built to be deployed and
+          used during class. Teachers can handout assignments in real-time for
+          students to complete and submit.
+        </p>
+      </div>
+    </div>
+    <div class="col-12 col-lg-6">
+      <img src="../../../../assets/tools.png" alt="" />
+    </div>
+  </section>
+</div>
+<app-footer />

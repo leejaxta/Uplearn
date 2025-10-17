@@ -1,0 +1,32 @@
+<app-navbar />
+<div class="payment-container success">
+  <div class="icon-wrapper">
+    <div class="checkmark-circle">
+      <svg viewBox="0 0 52 52" class="checkmark">
+        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+        <path
+          class="checkmark__check"
+          fill="none"
+          d="M14.1 27.2l7.1 7.2 16.7-16.8"
+        />
+      </svg>
+    </div>
+  </div>
+
+  <h1>Payment Successful!</h1>
+  <p class="subtitle">
+    Thank you for your purchase. Your access is now activated.
+  </p>
+
+  <div class="button-group">
+    <button class="btn-dashboard" (click)="goToCourse()">
+      Continue to Course
+    </button>
+    <button class="btn-browse" (click)="goToCourses()">
+      Browse More Courses
+    </button>
+  </div>
+
+  <p class="auto-redirect">Redirecting to dashboard in 3 seconds...</p>
+</div>
+<app-footer />

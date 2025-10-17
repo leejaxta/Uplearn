@@ -1,0 +1,78 @@
+<app-navbar></app-navbar>
+<app-sidebar>
+  <div class="overview-container my-4">
+    <h2 class="fw-bold text-dark mb-4">Instructor Overview</h2>
+    <p class="text-muted">
+      Track your performance, revenue, and student growth.
+    </p>
+
+    <div class="cards-container d-flex gap-3 flex-wrap mb-5">
+      <div class="card overview-card flex-fill">
+        <div class="card-body">
+          <h5 class="card-title">Total Enrollments</h5>
+          <p class="card-value">{{ totalEnrollments || 0 }}</p>
+        </div>
+      </div>
+
+      <div class="card overview-card flex-fill">
+        <div class="card-body">
+          <h5 class="card-title">Total Revenue</h5>
+          <p class="card-value">₹{{ totalRevenue || 0 }}</p>
+        </div>
+      </div>
+
+      <div class="card overview-card flex-fill">
+        <div class="card-body">
+          <div>
+            <h5 class="card-title">Average Revenue</h5>
+            <p class="card-value">
+              ₹{{
+                (totalEnrollments ? totalRevenue / totalEnrollments : 0)
+                  | number : "1.0-0"
+              }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card chart-card p-3">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h5 class="mb-0">Weekly Enrollments</h5>
+
+        <div class="dropdown">
+          <button
+            class="btn btn-sm btn-outline-secondary dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <i class="bi bi-download me-1"></i> Export
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li>
+              <a
+                class="dropdown-item d-flex align-items-center no-active-style"
+                (click)="exportChartAsImage()"
+              >
+                <i class="bi bi-image me-2"></i> Export as PNG
+              </a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item d-flex align-items-center no-active-style"
+                (click)="exportDataAsCSV()"
+              >
+                <i class="bi bi-table me-2"></i> Export as CSV
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="text-muted">Showing enrollments from the last 4 weeks</p>
+      <div class="chart-container">
+        <canvas #weeklyChart></canvas>
+      </div>
+    </div>
+  </div>
+</app-sidebar>

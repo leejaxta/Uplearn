@@ -1,0 +1,144 @@
+.payment-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 80vh;
+  padding: 2rem;
+  text-align: center;
+
+  &.success {
+    .icon-wrapper {
+      margin-bottom: 2rem;
+
+      .checkmark-circle {
+        align-items: center;
+        background: rgba(32, 180, 134, 0.15);
+        border-radius: 50%;
+        display: flex;
+        height: 120px;
+        justify-content: center;
+        margin: 0 auto;
+        width: 120px;
+
+        .checkmark {
+          height: 70px;
+          width: 70px;
+
+          .checkmark__circle {
+            animation: dash 0.8s ease-in-out forwards;
+            stroke: #20b486;
+            stroke-dasharray: 166;
+            stroke-dashoffset: 166;
+            stroke-width: 3;
+          }
+
+          .checkmark__check {
+            animation: check 0.8s ease-in-out 0.4s forwards;
+            stroke: #20b486;
+            stroke-dasharray: 50;
+            stroke-dashoffset: 50;
+            stroke-linecap: round;
+            stroke-width: 4;
+          }
+        }
+      }
+    }
+
+    h1 {
+      color: #2c3e50;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      color: #7f8c8d;
+      font-size: 1.1rem;
+      margin: 0 auto 2rem;
+      max-width: 600px;
+    }
+
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+
+      button {
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 14px 32px;
+        transition: all 0.3s ease;
+
+        &.btn-dashboard {
+          background: #20b486;
+          color: white;
+
+          &:hover {
+            background: #1a9a74;
+            transform: translateY(-2px);
+          }
+        }
+
+        &.btn-browse {
+          background: #f8f9fa;
+          border: 2px solid #20b486;
+          color: #20b486;
+
+          &:hover {
+            background: #e8f7f1;
+            transform: translateY(-2px);
+          }
+        }
+      }
+    }
+
+    .auto-redirect {
+      color: #95a5a6;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 166;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes check {
+  0% {
+    stroke-dashoffset: 50;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .payment-container {
+    padding: 1rem;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    .button-group {
+      align-items: center;
+      flex-direction: column;
+
+      button {
+        max-width: 300px;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,92 @@
+<nav class="navbar-modern">
+  <div class="container-nav">
+    <div class="nav-start">
+      <a class="navbar-brand" routerLink="/home/homepage">
+        <img src="../../../assets/uplearn.png" alt="Uplearn" width="50" />
+      </a>
+      <div class="search-container">
+        <i class="bi bi-search search-icon"></i>
+        <input
+          class="search-input"
+          type="search"
+          placeholder="Search..."
+          [(ngModel)]="searchValue"
+          (keydown.enter)="onSearch()"
+        />
+        <button (click)="onSearch()" class="search-btn">Search</button>
+      </div>
+    </div>
+    <ul class="navbar-links">
+      <li><a routerLink="/home/homepage" routerLinkActive="active">Home</a></li>
+      <li *ngIf="!user?.isInstructor">
+        <a routerLink="/home/courses" routerLinkActive="active">Courses</a>
+      </li>
+      <li *ngIf="user">
+        <a [routerLink]="getDashboardLink()" routerLinkActive="active"
+          >My Dashboard</a
+        >
+      </li>
+      <li>
+        <a routerLink="/home/aboutUs" routerLinkActive="active">About Us</a>
+      </li>
+    </ul>
+
+    <div class="btns d-flex" *ngIf="!user">
+      <a class="btn login-btn me-2" routerLink="/auth/login">Login</a>
+      <a class="btn signup-btn" routerLink="/auth/signup">Sign Up</a>
+    </div>
+    <div class="dropdown" *ngIf="user">
+      <button
+        class="btn btn-link text-white p-0"
+        type="button"
+        data-bs-toggle="dropdown"
+      >
+        <img
+          [src]="'https://placehold.co/40x40/555/FFFFFF?text=' + getInitial()"
+          alt="Profile"
+          class="rounded-circle profile-img"
+        />
+      </button>
+      <ul class="dropdown-menu mt-1 dropdown-menu-start dropdown-menu-lg-end">
+        <li>
+          <a
+            class="dropdown-item no-active-style"
+            (click)="openLogoutModal()"
+            style="cursor: pointer"
+          >
+            Logout
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="bottom-nav">
+  <a routerLink="/home/homepage"
+    ><i class="bi bi-house"></i><span>Home</span></a
+  >
+  <a *ngIf="!user?.isInstructor" routerLink="/home/courses"
+    ><i class="bi bi-book"></i><span>Courses</span></a
+  >
+  <a *ngIf="user" [routerLink]="getDashboardLink()"
+    ><i class="bi bi-grid"></i><span>My Dashboard</span></a
+  >
+  <a routerLink="/home/aboutUs"
+    ><i class="bi bi-info-circle"></i><span>About</span></a
+  >
+</div>
+
+<app-model
+  [(show)]="logoutModalVisible"
+  title="Confirm Logout"
+  class="no-divider-modal"
+>
+  <div class="text-center">Are you sure you want to logout?</div>
+  <div modal-footer>
+    <button class="btn btn-secondary me-2" (click)="cancelLogout()">
+      Cancel
+    </button>
+    <button class="btn btn-danger" (click)="confirmLogout()">Logout</button>
+  </div>
+</app-model>

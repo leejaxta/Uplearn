@@ -1,0 +1,1129 @@
+{
+  "courses": [
+    {
+      "id": 1758103780348,
+      "title": "Flutter",
+      "description": "Flutter is Google’s open-source UI toolkit for building natively compiled applications for mobile, web, and desktop from a single codebase. It uses the Dart programming language and provides fast development with a rich set of customizable widgets.",
+      "price": 1000,
+      "instructorId": "p7b1pC62qpfRSpgFU8xkiMm3Fgm2",
+      "instructorName": "Leeja Shrestha",
+      "image": "http://localhost:3000/uploads/images/1758732887209-119927224.jpg",
+      "topics": [
+        1758103780349
+      ],
+      "finalQuiz": {
+        "pass": false,
+        "questions": [
+          {
+            "q": "Flutter is mainly used for:",
+            "options": [
+              "Data analysis",
+              "Cross-platform app development",
+              "Game engine design",
+              "Database management"
+            ],
+            "answer": "Cross-platform app development"
+          }
+        ]
+      },
+      "createdAt": "2025-09-17T10:09:40.349Z",
+      "updatedAt": "2025-09-24T16:54:47.295Z",
+      "status": "active"
+    },
+    {
+      "id": 1758104755006,
+      "title": "Angular",
+      "description": "This course introduces Angular, a powerful framework for building modern, dynamic, and responsive web applications. You’ll learn key concepts like components, data binding, services, and routing through practical examples.",
+      "price": 0,
+      "instructorId": "p7b1pC62qpfRSpgFU8xkiMm3Fgm2",
+      "instructorName": "Leeja Shrestha",
+      "image": "http://localhost:3000/uploads/images/1758104754897-539136967.jpg",
+      "topics": [
+        1758104755007,
+        1758104755008,
+        1758104755009,
+        1758104755010
+      ],
+      "finalQuiz": {
+        "pass": false,
+        "questions": [
+          {
+            "q": "You are building an Angular web application with a login form. The app requires reusable UI parts, formatted date display, navigation between pages, shared authentication logic, and proper form input handling. Which combination of Angular features would best meet these requirements?",
+            "options": [
+              "Directives, Pipes, RouterModule, Services, Forms",
+              "Components, Filters, HttpClient, Modules, Events",
+              "Templates, Guards, Animations, Observables, Testing",
+              "Services, Routing, Forms, CSS, LocalStorage"
+            ],
+            "answer": "Directives, Pipes, RouterModule, Services, Forms"
+          }
+        ]
+      },
+      "createdAt": "2025-09-17T10:25:55.007Z",
+      "updatedAt": "2025-09-17T10:25:55.007Z",
+      "status": "active"
+    },
+    {
+      "id": 1758248542690,
+      "title": "React",
+      "description": "This course introduces you to the fundamentals of React, helping you understand how to build dynamic user interfaces. You will learn about components, state management, and props to create interactive web applications. By the end of the course, you will be able to build and deploy a simple React project with confidence.",
+      "price": 0,
+      "instructorId": "p7b1pC62qpfRSpgFU8xkiMm3Fgm2",
+      "instructorName": "Leeja Shrestha",
+      "image": "http://localhost:3000/uploads/images/1758248542654-745725077.png",
+      "topics": [
+        1758248542691
+      ],
+      "finalQuiz": {
+        "pass": false,
+        "questions": [
+          {
+            "q": "Which command creates a new React app using Create React App?",
+            "options": [
+              "npx create-react-app my-app",
+              "npm init react-app my-app",
+              "yarn react create my-app",
+              "npm react start my-app"
+            ],
+            "answer": "npx create-react-app my-app"
+          },
+          {
+            "q": "What is the correct way to update state in a class component?",
+            "options": [
+              "this.state = {...}",
+              "this.setState({...})",
+              "state.update({...})",
+              "updateState({...})"
+            ],
+            "answer": "this.setState({...})"
+          },
+          {
+            "q": "Which of these is a controlled component?",
+            "options": [
+              "<input value={this.state.value} onChange={this.handleChange} />",
+              "<input defaultValue=\"text\" />",
+              "<textarea>text</textarea>",
+              "<select><option>1</option></select>"
+            ],
+            "answer": "<input value={this.state.value} onChange={this.handleChange} />"
+          },
+          {
+            "q": "What is the purpose of useEffect hook?",
+            "options": [
+              "To manage state",
+              "To perform side effects",
+              "To pass props",
+              "To create context"
+            ],
+            "answer": "To perform side effects"
+          },
+          {
+            "q": "Which of the following is a correct way to conditionally render JSX?",
+            "options": [
+              "{condition ? <Component /> : null}",
+              "<Component condition={true} />",
+              "renderIf(condition, <Component />)",
+              "showComponent(condition)"
+            ],
+            "answer": "{condition ? <Component /> : null}"
+          }
+        ]
+      },
+      "createdAt": "2025-09-19T02:22:22.691Z",
+      "updatedAt": "2025-09-24T17:14:16.882Z",
+      "status": "active"
+    },
+    {
+      "id": 1758272380455,
+      "title": "Vue",
+      "description": "This course covers Vue.js, a progressive JavaScript framework for building user interfaces. Learners will understand its reactivity system, component-based structure, and how it simplifies modern web development.",
+      "price": 100,
+      "instructorId": "p7b1pC62qpfRSpgFU8xkiMm3Fgm2",
+      "instructorName": "Leeja Shrestha",
+      "image": "http://localhost:3000/uploads/images/1758733123973-8786282.webp",
+      "topics": [
+        1758272380456
+      ],
+      "finalQuiz": {
+        "pass": false,
+        "questions": [
+          {
+            "q": "Which feature in Vue.js allows binding data to the DOM?",
+            "options": [
+              "Directives",
+              "Services",
+              "Modules",
+              "Routes"
+            ],
+            "answer": "Directives"
+          }
+        ]
+      },
+      "createdAt": "2025-09-19T08:59:40.455Z",
+      "updatedAt": "2025-09-24T17:18:47.506Z",
+      "status": "active"
+    },
+    {
+      "id": 1758001186742,
+      "courseId": 1758001186742,
+      "title": "Java",
+      "description": "This course provides a foundation in Java, a widely used object-oriented programming language. Students will learn to build robust, portable, and secure applications.",
+      "price": 0,
+      "instructorId": "p7b1pC62qpfRSpgFU8xkiMm3Fgm2",
+      "instructorName": "Leeja Shrestha",
+      "image": "http://localhost:3000/uploads/images/1758733477418-876120662.jpg",
+      "topics": [
+        1758001186742
+      ],
+      "finalQuiz": {
+        "pass": false,
+        "questions": [
+          {
+            "q": "Which of the following is not a Java feature?",
+            "options": [
+              "Object-oriented",
+              "Platform-independent",
+              "Low-level memory access",
+              "Secure"
+            ],
+            "answer": "Low-level memory access"
+          }
+        ]
+      },
+      "updatedAt": "2025-09-24T17:16:22.522Z"
+    },
+    {
+      "id": 1758441966975,
+      "title": "Node",
+      "description": "This course introduces Node.js, a runtime environment that allows developers to run JavaScript on the server side. Learners will build scalable and fast backend applications using Node.js and its ecosystem.",
+      "price": 0,
+      "instructorId": "p7b1pC62qpfRSpgFU8xkiMm3Fgm2",
+      "instructorName": "Leeja Shrestha",
+      "image": "http://localhost:3000/uploads/images/1758733224402-384674213.png",
+      "topics": [
+        1758441966976
+      ],
+      "finalQuiz": {
+        "pass": false,
+        "questions": [
+          {
+            "q": "Which of the following is the package manager for Node.js?",
+            "options": [
+              "pip",
+              "npm",
+              "maven",
+              "gradle"
+            ],
+            "answer": "npm"
+          }
+        ]
+      },
+      "createdAt": "2025-09-21T08:06:06.976Z",
+      "updatedAt": "2025-09-24T17:23:15.461Z",
+      "status": "active"
+    },
+    {
+      "id": 1758735497322,
+      "title": "Django",
+      "description": "This course introduces Django, a high-level Python web framework that promotes rapid development and clean, pragmatic design. Students will learn to build secure, scalable, and maintainable web applications.",
+      "price": 5000,
+      "instructorId": "b2Pd1nwKKkT4lNrlCmdyxJc73qK2",
+      "instructorName": "Sohan",
+      "image": "http://localhost:3000/uploads/images/1758735497244-894926368.jpeg",
+      "topics": [
+        1758735497323
+      ],
+      "finalQuiz": {
+        "pass": false,
+        "questions": [
+          {
+            "q": "Which command is used to start a new Django project?",
+            "options": [
+              "django-admin startproject",
+              "django startproject",
+              "manage.py startproject",
+              "django-admin create"
+            ],
+            "answer": "django-admin startproject"
+          }
+        ]
+      },
+      "createdAt": "2025-09-24T17:38:17.323Z",
+      "updatedAt": "2025-09-24T17:38:17.323Z",
+      "status": "active"
+    },
+    {
+      "id": 1758778033996,
+      "title": "SQL & Databases",
+      "description": "This course covers SQL, the standard language for managing and querying relational databases. Learners will gain practical experience in creating, modifying, and retrieving data from databases.",
+      "price": 100,
+      "instructorId": "p7b1pC62qpfRSpgFU8xkiMm3Fgm2",
+      "instructorName": "Leeja Shrestha",
+      "image": "http://localhost:3000/uploads/images/1758778033920-136359613.jpeg",
+      "topics": [
+        1758778033997
+      ],
+      "finalQuiz": {
+        "pass": false,
+        "questions": [
+          {
+            "q": "In SQL, which keyword is used to remove duplicate rows in a result?",
+            "options": [
+              "UNIQUE",
+              "DISTINCT",
+              "PRIMARY",
+              "FILTER"
+            ],
+            "answer": "DISTINCT"
+          }
+        ]
+      },
+      "createdAt": "2025-09-25T05:27:13.997Z",
+      "updatedAt": "2025-09-25T05:27:13.997Z",
+      "status": "active"
+    }
+  ],
+  "topics": [
+    {
+      "id": 1758001186742,
+      "courseId": 1758001186742,
+      "title": "Introduction to Java",
+      "files": [
+        {
+          "name": "John Doe-certificate (1).pdf",
+          "path": "http://localhost:3000/uploads/1758001186693.pdf",
+          "type": "application/pdf",
+          "size": 256044,
+          "uploadedAt": "2025-09-24T17:04:37.423Z"
+        }
+      ],
+      "video": "http://localhost:3000/uploads/1758001186697.mp4",
+      "quiz": {
+        "pass": false,
+        "questions": [
+          {
+            "q": "Java achieves platform independence using:",
+            "options": [
+              "Compiler",
+              "JVM (Java Virtual Machine)",
+              "JDK",
+              "JRE"
+            ],
+            "answer": "JVM (Java Virtual Machine)"
+          }
+        ]
+      },
+      "description": "In this topic, learners will explore Java’s features such as platform independence, object-oriented principles, and strong memory management. They will also write their first Java program.",
+      "createdAt": "2025-09-24T17:04:37.423Z",
+      "updatedAt": "2025-09-24T17:16:22.522Z"
+    },
+    {
+      "id": 1758103780349,
+      "courseId": 1758103780348,
+      "title": "Introduction to Flutter",
+      "description": "In this topic, learners explore the basics of Flutter, its architecture, and how it enables fast cross-platform development. They will also learn about the Dart language and the role of widgets as the building blocks of Flutter apps.",
+      "files": [
+        {
+          "name": "flutter_tutorial.pdf",
+          "path": "http://localhost:3000/uploads/docs/1758732887233-881393300.pdf",
+          "type": "application/pdf",
+          "size": 3521913,
+          "uploadedAt": "2025-09-24T16:54:47.295Z"
+        }
+      ],
+      "video": "http://localhost:3000/uploads/videos/1758732887246-306646549.mp4",
+      "quiz": {
+        "pass": false,
+        "questions": [
+          {
+            "q": "Which programming language is primarily used in Flutter?",
+            "options": [
+              "Java",
+              "Kotlin",
+              "Dart",
+              "Swift"
+            ],
+            "answer": "Dart"
+          }
+        ]
+      },
+      "createdAt": "2025-09-17T10:09:40.349Z",
+      "updatedAt": "2025-09-24T16:54:47.295Z"
+    },
+    {
+      "id": 1758104755007,
+      "courseId": 1758104755006,
+      "title": "Introduction to Angular",
+      "description": "Learn the basics of Angular, its architecture, and how it simplifies building modern web applications.",
+      "files": [
+        {
+          "name": "BLS_Training_Event_Report.pdf",
+          "path": "http://localhost:3000/uploads/docs/1758104754899-862102392.pdf",
+          "type": "application/pdf",
+          "size": 3192,
+          "uploadedAt": "2025-09-17T10:25:55.007Z"
+        }
+      ],
+      "video": "http://localhost:3000/uploads/videos/1758104754899-399464392.mp4",
+      "quiz": {
+        "pass": false,
+        "questions": [
+          {
+            "q": "Angular is primarily used for:",
+            "options": [
+              "Mobile development",
+              "Desktop applications",
+              "Web application development",
+              "Database management"
+            ],
+            "answer": "Web application development"
+          },
+          {
+            "q": "Which company developed Angular?",
+            "options": [
+              "Facebook",
+              "Google",
+              "Microsoft",
+              "Amazon"
+            ],
+            "answer": "Google"
+          },
+          {
+            "q": "Which language is primarily used to write Angular applications?",
+            "options": [
+              "Java",
+              "TypeScript",
+              "Python",
+              "PHP"
+            ],
+            "answer": "TypeScript"
+          },
+          {
+            "q": "What does Angular use to extend HTML with additional functionality?",
+            "options": [
+              "Controllers",
+              "Directives",
+              "Services",
+              "Libraries"
+            ],
+            "answer": "Directives"
+          },
+          {
+            "q": "What is the purpose of Angular components?",
+            "options": [
+              "Define reusable UI blocks",
+              "Store application data",
+              "Handle routing",
+              "Manage databases"
+            ],
+            "answer": "Define reusable UI blocks"
+          },
+          {
+            "q": "Which command is used to create a new Angular project?",
+            "options": [
+              "ng new",
+              "ng create",
+              "npm init angular",
+              "ng start"
+            ],
+            "answer": "ng new"
+          },
+          {
+            "q": "Which Angular module is required for two-way data binding?",
+            "options": [
+              "HttpClientModule",
+              "FormsModule",
+              "RouterModule",
+              "CommonModule"
+            ],
+            "answer": "FormsModule"
+          },
+          {
+            "q": "Which of the following is used for navigation in Angular?",
+            "options": [
+              "HttpClient",
+              "Router",
+              "Interceptor",
+              "Service"
+            ],
+            "answer": "Router"
+          },
+          {
+            "q": "What is the role of Angular CLI?",
+            "options": [
+              "Provides a graphical interface",
+              "Helps create, build, and manage Angular projects",
+              "Stores project configuration",
+              "Compiles TypeScript to JavaScript"
+            ],
+            "answer": "Helps create, build, and manage Angular projects"
+          },
+          {
+            "q": "Which decorator is used to define a component in Angular?",
+            "options": [
+              "@NgModule",
+              "@Injectable",
+              "@Component",
+              "@Directive"
+            ],
+            "answer": "@Component"
+          }
+        ]
+      },
+      "createdAt": "2025-09-17T10:25:55.007Z"
+    },
+    {
+      "id": 1758104755008,
+      "courseId": 1758104755006,
+      "title": "Components and Templates",
+      "description": "Understand how to create reusable components and design interactive templates with data binding.",
+      "files": [
+        {
+          "name": "BLS_Training_Event_Report.pdf",
+          "path": "http://localhost:3000/uploads/docs/1758104754934-239044849.pdf",
+          "type": "application/pdf",
+          "size": 3192,
+          "uploadedAt": "2025-09-17T10:25:55.007Z"
+        }
+      ],
+      "video": "http://localhost:3000/uploads/videos/1758104754935-621093841.mp4",
+      "quiz": {
+        "pass": false,
+        "questions": [
+          {
+            "q": "Which decorator is used to define a component in Angular?",
+            "options": [
+              "@Injectable",
+              "@NgModule",
+              "@Component",
+              "@Directive"
+            ],
+            "answer": "@Component"
+          }
+        ]
+      },
+      "createdAt": "2025-09-17T10:25:55.007Z"
+    },
+    {
+      "id": 1758104755009,
+      "courseId": 1758104755006,
+      "title": "Directives and Pipes",
+      "description": "Explore Angular’s built-in directives and pipes to manipulate DOM elements and transform data.",
+      "files": [
+        {
+          "name": "BLS_Training_Event_Report.pdf",
+          "path": "http://localhost:3000/uploads/docs/1758104754959-988879844.pdf",
+          "type": "application/pdf",
+          "size": 3192,
+          "uploadedAt": "2025-09-17T10:25:55.007Z"
+        }
+      ],
+      "video": "http://localhost:3000/uploads/videos/1758104754959-684438801.mp4",
+      "quiz": {
+        "pass": false,
+        "questions": [
+          {
+            "q": "Which of the following is a structural directive?",
+            "options": [
+              "*ngIf",
+              "| date",
+              "[(ngModel)]",
+              "async"
+            ],
+            "answer": "*ngIf"
+          }
+        ]
+      },
+      "createdAt": "2025-09-17T10:25:55.007Z"
+    },
+    {
+      "id": 1758104755010,
+      "courseId": 1758104755006,
+      "title": "Services and Dependency Injection",
+      "description": "Learn how to use services for data sharing and apply dependency injection to manage application logic efficiently.",
+      "files": [
+        {
+          "name": "Event_Report.pdf",
+          "path": "http://localhost:3000/uploads/docs/1758104754980-954461414.pdf",
+          "type": "application/pdf",
+          "size": 3192,
+          "uploadedAt": "2025-09-17T10:25:55.007Z"
+        },
+        {
+          "name": "Event_Report.pdf",
+          "path": "http://localhost:3000/uploads/docs/1758104754980-954461414.pdf",
+          "type": "application/pdf",
+          "size": 3192,
+          "uploadedAt": "2025-09-17T10:25:55.007Z"
+        },
+        {
+          "name": "Event_Report.pdf",
+          "path": "http://localhost:3000/uploads/docs/1758104754980-954461414.pdf",
+          "type": "application/pdf",
+          "size": 3192,
+          "uploadedAt": "2025-09-17T10:25:55.007Z"
+        }
+      ],
+      "video": "http://localhost:3000/uploads/videos/1758104754981-738825905.mp4",
+      "quiz": {
+        "pass": false,
+        "questions": [
+          {
+            "q": "Which Angular decorator marks a class as a service that can be injected?",
+            "options": [
+              "@Component",
+              "@Injectable",
+              "@Service",
+              "@Module"
+            ],
+            "answer": "@Injectable"
+          }
+        ]
+      },
+      "createdAt": "2025-09-17T10:25:55.007Z"
+    },
+    {
+      "id": 1758248542691,
+      "courseId": 1758248542690,
+      "title": "Introduction to React",
+      "description": "Understand components, JSX, props, and state in React. Learn how to create functional and class-based components.",
+      "files": [
+        {
+          "name": "BLS_Training_Event_Report.pdf",
+          "path": "http://localhost:3000/uploads/docs/1758248542656-794253162.pdf",
+          "type": "application/pdf",
+          "size": 3192,
+          "uploadedAt": "2025-09-19T02:22:22.690Z"
+        }
+      ],
+      "video": "http://localhost:3000/uploads/videos/1758248542656-787338344.mp4",
+      "quiz": {
+        "pass": false,
+        "questions": [
+          {
+            "q": "What does JSX stand for in React?",
+            "options": [
+              "JavaScript XML",
+              "JavaScript eXtension",
+              "Java Syntax eXtension",
+              "JavaScript Express"
+            ],
+            "answer": "JavaScript XML"
+          },
+          {
+            "q": "Which hook is used to manage state in a functional component?",
+            "options": [
+              "useEffect",
+              "useState",
+              "useContext",
+              "useReducer"
+            ],
+            "answer": "useState"
+          },
+          {
+            "q": "How do you pass data from parent to child components?",
+            "options": [
+              "Using state",
+              "Using props",
+              "Using hooks",
+              "Using Redux"
+            ],
+            "answer": "Using props"
+          },
+          {
+            "q": "Which method is called when a component is mounted?",
+            "options": [
+              "componentWillMount",
+              "componentDidMount",
+              "render",
+              "useEffect"
+            ],
+            "answer": "componentDidMount"
+          },
+          {
+            "q": "What is a key used for in lists?",
+            "options": [
+              "To identify components uniquely",
+              "To style components",
+              "To trigger re-render",
+              "To hold state"
+            ],
+            "answer": "To identify components uniquely"
+          }
+        ]
+      },
+      "createdAt": "2025-09-19T02:22:22.691Z",
+      "updatedAt": "2025-09-24T17:14:16.882Z"
+    },
+    {
+      "id": 1758272380456,
+      "courseId": 1758272380455,
+      "title": "Introduction to Vue.js",
+      "description": "Learners will explore the core concepts of Vue.js, including its declarative rendering and data binding features. The topic also introduces the Vue instance and its role in managing application state.",
+      "files": [
+        {
+          "name": "John Doe-certificate (1).pdf",
+          "path": "http://localhost:3000/uploads/docs/1758444179642-270433423.pdf",
+          "type": "application/pdf",
+          "size": 256044,
+          "uploadedAt": "2025-09-21T08:42:59.645Z"
+        }
+      ],
+      "video": "http://localhost:3000/uploads/videos/1758272380399-890104505.mp4",
+      "quiz": {
+        "pass": false,
+        "questions": [
+          {
+            "q": "Vue.js is primarily used for:",
+            "options": [
+              "Backend APIs",
+              "UI development",
+              "Database management",
+              "Server deployment"
+            ],
+            "answer": "UI development"
+          }
+        ]
+      },
+      "createdAt": "2025-09-19T08:59:40.455Z",
+      "updatedAt": "2025-09-24T17:18:47.506Z"
+    },
+    {
+      "id": 1758441966976,
+      "courseId": 1758441966975,
+      "title": "Introduction to Node.js",
+      "description": "In this topic, students learn about Node.js’s event-driven, non-blocking I/O model and how it enables building efficient server-side applications. They will also explore npm for package management.",
+      "files": [
+        {
+          "name": "John Doe-certificate.pdf",
+          "path": "http://localhost:3000/uploads/docs/1758454831828-895036353.pdf",
+          "type": "application/pdf",
+          "size": 256044,
+          "uploadedAt": "2025-09-21T11:40:31.833Z"
+        }
+      ],
+      "video": "http://localhost:3000/uploads/videos/1758442015847-352272613.mp4",
+      "quiz": {
+        "pass": false,
+        "questions": [
+          {
+            "q": "Node.js is built on which engine?",
+            "options": [
+              "Chakra",
+              "V8",
+              "SpiderMonkey",
+              "Rhino"
+            ],
+            "answer": "V8"
+          }
+        ]
+      },
+      "createdAt": "2025-09-21T08:06:06.976Z",
+      "updatedAt": "2025-09-24T17:23:15.461Z"
+    },
+    {
+      "id": 1758735497323,
+      "courseId": 1758735497322,
+      "title": "Introduction to Django",
+      "description": "Learners will explore Django’s MVC-inspired MVT architecture, its built-in features for database handling, authentication, and its “batteries-included” philosophy.",
+      "files": [
+        {
+          "name": "flutter_tutorial.pdf",
+          "path": "http://localhost:3000/uploads/docs/1758735497244-171883180.pdf",
+          "type": "application/pdf",
+          "size": 3521913,
+          "uploadedAt": "2025-09-24T17:38:17.323Z"
+        }
+      ],
+      "video": "http://localhost:3000/uploads/videos/1758735497259-57863567.mp4",
+      "quiz": {
+        "pass": false,
+        "questions": [
+          {
+            "q": "Django follows which design pattern?",
+            "options": [
+              "MVC",
+              "MVP",
+              "MVT",
+              "MVVM"
+            ],
+            "answer": "MVT"
+          }
+        ]
+      },
+      "createdAt": "2025-09-24T17:38:17.323Z"
+    },
+    {
+      "id": 1758778033997,
+      "courseId": 1758778033996,
+      "title": "Introduction to SQL",
+      "description": "Students will learn the basics of relational databases, SQL syntax, and simple queries using SELECT, INSERT, and UPDATE.",
+      "files": [
+        {
+          "name": "flutter_tutorial.pdf",
+          "path": "http://localhost:3000/uploads/docs/1758778033921-797207476.pdf",
+          "type": "application/pdf",
+          "size": 3521913,
+          "uploadedAt": "2025-09-25T05:27:13.997Z"
+        }
+      ],
+      "video": "http://localhost:3000/uploads/videos/1758778033939-49432502.mp4",
+      "quiz": {
+        "pass": false,
+        "questions": [
+          {
+            "q": "Which SQL command is used to extract data from a database?",
+            "options": [
+              "GET",
+              "SELECT",
+              "EXTRACT",
+              "FETCH"
+            ],
+            "answer": "SELECT"
+          }
+        ]
+      },
+      "createdAt": "2025-09-25T05:27:13.997Z"
+    }
+  ],
+  "enrollments": [
+    {
+      "student_id": "GT4MRORakxgc6D6KloLS2G8M6fN2",
+      "course_id": 1757932304579,
+      "enrolled_at": "2025-09-08T16:40:03.613Z",
+      "status": "active",
+      "id": 1
+    },
+    {
+      "student_id": "GT4MRORakxgc6D6KloLS2G8M6fN2",
+      "course_id": 1758104755006,
+      "enrolled_at": "2025-09-01T02:47:39.533Z",
+      "status": "active",
+      "id": 2
+    },
+    {
+      "student_id": "GT4MRORakxgc6D6KloLS2G8M6fN2",
+      "course_id": 1758248542690,
+      "enrolled_at": "2025-09-02T02:23:06.203Z",
+      "status": "active",
+      "id": 3
+    },
+    {
+      "student_id": "SmZJ3KBFixNxNhy240vIvORrpAf2",
+      "course_id": 1758248542690,
+      "enrolled_at": "2025-09-03T05:35:24.491Z",
+      "status": "active",
+      "id": 4
+    },
+    {
+      "student_id": "SmZJ3KBFixNxNhy240vIvORrpAf2",
+      "course_id": 1758104755006,
+      "enrolled_at": "2025-09-05T06:11:43.572Z",
+      "status": "active",
+      "id": 5
+    },
+    {
+      "student_id": "GT4MRORakxgc6D6KloLS2G8M6fN2",
+      "course_id": 1757957026636,
+      "enrolled_at": "2025-09-13T08:52:57.353Z",
+      "status": "active",
+      "id": 6
+    },
+    {
+      "student_id": "GT4MRORakxgc6D6KloLS2G8M6fN2",
+      "course_id": 1758272380455,
+      "enrolled_at": "2025-09-14T12:59:07.560Z",
+      "status": "active",
+      "id": 7
+    },
+    {
+      "student_id": "GT4MRORakxgc6D6KloLS2G8M6fN2",
+      "course_id": 1758001186742,
+      "enrolled_at": "2025-09-16T13:08:23.857Z",
+      "status": "active",
+      "id": 8
+    },
+    {
+      "student_id": "GT4MRORakxgc6D6KloLS2G8M6fN2",
+      "course_id": 1758075063434,
+      "enrolled_at": "2025-09-15T13:10:38.403Z",
+      "status": "active",
+      "id": 9
+    },
+    {
+      "student_id": "ofbUgM7nZLU0viwODeAnS49F0vo2",
+      "course_id": 1758441966975,
+      "enrolled_at": "2025-09-22T10:34:29.877Z",
+      "status": "active",
+      "id": 10
+    },
+    {
+      "student_id": "lGo2wlNTRmMle63Letv0AFfNe213",
+      "course_id": 1758001186742,
+      "enrolled_at": "2025-09-23T05:15:46.762Z",
+      "status": "active",
+      "id": 11
+    },
+    {
+      "student_id": "lGo2wlNTRmMle63Letv0AFfNe213",
+      "course_id": 1758104755006,
+      "enrolled_at": "2025-09-23T05:17:21.423Z",
+      "status": "active",
+      "id": 12
+    },
+    {
+      "student_id": "lGo2wlNTRmMle63Letv0AFfNe213",
+      "course_id": 1758248542690,
+      "enrolled_at": "2025-09-23T05:20:06.122Z",
+      "status": "active",
+      "id": 13
+    },
+    {
+      "student_id": "GT4MRORakxgc6D6KloLS2G8M6fN2",
+      "course_id": 1758642099961,
+      "enrolled_at": "2025-09-23T15:42:24.957Z",
+      "status": "active",
+      "id": 14
+    },
+    {
+      "student_id": "GT4MRORakxgc6D6KloLS2G8M6fN2",
+      "course_id": 1758441966975,
+      "enrolled_at": "2025-09-24T16:06:54.961Z",
+      "status": "active",
+      "id": 15
+    },
+    {
+      "student_id": "GT4MRORakxgc6D6KloLS2G8M6fN2",
+      "course_id": 1758103780348,
+      "enrolled_at": "2025-09-24T17:43:30.932Z",
+      "status": "active",
+      "id": 16
+    },
+    {
+      "student_id": "GT4MRORakxgc6D6KloLS2G8M6fN2",
+      "course_id": 1758735497322,
+      "enrolled_at": "2025-09-24T17:46:24.451Z",
+      "status": "active",
+      "id": 17
+    },
+    {
+      "student_id": "896u0p0aX9dUT3ZjQoPujBKdewx1",
+      "course_id": 1758104755006,
+      "enrolled_at": "2025-09-24T17:49:00.372Z",
+      "status": "active",
+      "id": 18
+    },
+    {
+      "student_id": "SHdy7KtduuUONxEyHatqzBpm3fE2",
+      "course_id": 1758104755006,
+      "enrolled_at": "2025-09-25T01:00:34.779Z",
+      "status": "active",
+      "id": 19
+    },
+    {
+      "student_id": "SHdy7KtduuUONxEyHatqzBpm3fE2",
+      "course_id": 1758103780348,
+      "enrolled_at": "2025-09-25T01:01:00.082Z",
+      "status": "active",
+      "id": 20
+    },
+    {
+      "student_id": "3W9OOgHdvEfRkYcw3bTg0Ivi87g2",
+      "course_id": 1758103780348,
+      "enrolled_at": "2025-09-25T05:24:26.315Z",
+      "status": "active",
+      "id": 21
+    }
+  ],
+  "enrollment_topic_progress": [
+    {
+      "enrollment_id": 4,
+      "topic_id": 1758248542691,
+      "completed_at": "2025-09-19T05:48:30.766Z",
+      "id": 1
+    },
+    {
+      "enrollment_id": 5,
+      "topic_id": 1758104755007,
+      "completed_at": "2025-09-19T06:12:16.991Z",
+      "id": 2
+    },
+    {
+      "enrollment_id": 3,
+      "topic_id": 1758248542691,
+      "completed_at": "2025-09-19T06:21:46.473Z",
+      "id": 3
+    },
+    {
+      "enrollment_id": 2,
+      "topic_id": 1758104755007,
+      "completed_at": "2025-09-19T08:13:16.932Z",
+      "id": 4
+    },
+    {
+      "enrollment_id": 2,
+      "topic_id": 1758104755009,
+      "completed_at": "2025-09-19T08:55:05.374Z",
+      "id": 5
+    },
+    {
+      "enrollment_id": 2,
+      "topic_id": 1758104755010,
+      "completed_at": "2025-09-21T10:25:27.035Z",
+      "id": 6
+    },
+    {
+      "enrollment_id": 2,
+      "topic_id": 1758104755008,
+      "completed_at": "2025-09-21T10:25:49.548Z",
+      "id": 7
+    },
+    {
+      "enrollment_id": 7,
+      "topic_id": 1758272380456,
+      "completed_at": "2025-09-21T12:59:25.212Z",
+      "id": 8
+    },
+    {
+      "enrollment_id": 1,
+      "topic_id": 1757932304579,
+      "completed_at": "2025-09-22T12:03:55.802Z",
+      "id": 9
+    },
+    {
+      "enrollment_id": 8,
+      "topic_id": 1758001186742,
+      "completed_at": "2025-09-22T12:08:08.918Z",
+      "id": 10
+    },
+    {
+      "enrollment_id": 14,
+      "topic_id": 1758642099962,
+      "completed_at": "2025-09-23T15:42:56.694Z",
+      "id": 11
+    },
+    {
+      "enrollment_id": 14,
+      "topic_id": 1758642099963,
+      "completed_at": "2025-09-23T15:46:24.000Z",
+      "id": 12
+    },
+    {
+      "enrollment_id": 16,
+      "topic_id": 1758103780349,
+      "completed_at": "2025-09-24T17:45:03.662Z",
+      "id": 13
+    },
+    {
+      "enrollment_id": 18,
+      "topic_id": 1758104755009,
+      "completed_at": "2025-09-24T17:50:13.648Z",
+      "id": 14
+    },
+    {
+      "enrollment_id": 20,
+      "topic_id": 1758103780349,
+      "completed_at": "2025-09-25T01:03:19.022Z",
+      "id": 15
+    },
+    {
+      "enrollment_id": 21,
+      "topic_id": 1758103780349,
+      "completed_at": "2025-09-25T05:25:43.372Z",
+      "id": 16
+    }
+  ],
+  "enrollment_final_quiz": [
+    {
+      "enrollment_id": 4,
+      "completed_at": "2025-09-19T05:52:31.137Z",
+      "id": 1
+    },
+    {
+      "enrollment_id": 3,
+      "completed_at": "2025-09-19T06:22:54.592Z",
+      "id": 2
+    },
+    {
+      "enrollment_id": 2,
+      "completed_at": "2025-09-21T10:26:02.507Z",
+      "id": 3
+    },
+    {
+      "enrollment_id": 1,
+      "completed_at": "2025-09-22T12:07:43.949Z",
+      "id": 4
+    },
+    {
+      "enrollment_id": 14,
+      "completed_at": "2025-09-23T15:43:10.437Z",
+      "id": 5
+    },
+    {
+      "enrollment_id": 16,
+      "completed_at": "2025-09-24T17:45:18.021Z",
+      "id": 6
+    },
+    {
+      "enrollment_id": 20,
+      "completed_at": "2025-09-25T01:04:07.194Z",
+      "id": 7
+    },
+    {
+      "enrollment_id": 21,
+      "completed_at": "2025-09-25T05:25:56.633Z",
+      "id": 8
+    }
+  ],
+  "payments": [
+    {
+      "student_id": "ofbUgM7nZLU0viwODeAnS49F0vo2",
+      "course_id": 1758441966975,
+      "payment_at": "2025-09-22T10:34:29.830Z",
+      "status": "completed",
+      "id": 1
+    },
+    {
+      "student_id": "GT4MRORakxgc6D6KloLS2G8M6fN2",
+      "course_id": 1758642099961,
+      "payment_at": "2025-09-23T15:42:24.916Z",
+      "status": "completed",
+      "id": 2
+    },
+    {
+      "student_id": "GT4MRORakxgc6D6KloLS2G8M6fN2",
+      "course_id": 1758441966975,
+      "payment_at": "2025-09-24T16:06:54.932Z",
+      "status": "completed",
+      "id": 3
+    },
+    {
+      "student_id": "GT4MRORakxgc6D6KloLS2G8M6fN2",
+      "course_id": 1758103780348,
+      "payment_at": "2025-09-24T17:43:30.903Z",
+      "status": "completed",
+      "id": 4
+    },
+    {
+      "student_id": "GT4MRORakxgc6D6KloLS2G8M6fN2",
+      "course_id": 1758735497322,
+      "payment_at": "2025-09-24T17:46:24.421Z",
+      "status": "completed",
+      "id": 5
+    },
+    {
+      "student_id": "SHdy7KtduuUONxEyHatqzBpm3fE2",
+      "course_id": 1758103780348,
+      "payment_at": "2025-09-25T01:01:00.033Z",
+      "status": "completed",
+      "id": 6
+    },
+    {
+      "student_id": "3W9OOgHdvEfRkYcw3bTg0Ivi87g2",
+      "course_id": 1758103780348,
+      "payment_at": "2025-09-25T05:24:26.246Z",
+      "status": "completed",
+      "id": 7
+    }
+  ]
+}

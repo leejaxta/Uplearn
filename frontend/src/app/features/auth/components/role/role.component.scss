@@ -1,0 +1,120 @@
+.card-role {
+  border: 2px solid transparent;
+}
+
+.student-card:hover {
+  border-color: rgba(74, 200, 174, 0.2);
+}
+
+.instructor-card:hover {
+  border-color: rgba(74, 200, 174, 0.2);
+}
+
+.card-header-img {
+  background-position: center;
+  background-size: cover;
+  height: 140px;
+}
+
+.student-header {
+  background: linear-gradient(45deg, #4ac8ae, #3aa892);
+}
+
+.instructor-header {
+  background: linear-gradient(45deg, #3aa892, #2f8a77);
+}
+
+.icon-container {
+  align-items: center;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: inline-flex;
+  font-size: 2rem;
+  height: 80px;
+  justify-content: center;
+  margin-top: -60px;
+  position: relative;
+  width: 80px;
+  z-index: 3;
+}
+
+.student-icon {
+  border: 3px solid #4ac8ae;
+  color: #4ac8ae;
+}
+
+.instructor-icon {
+  border: 3px solid #3aa892;
+  color: #3aa892;
+}
+
+.btn-theme {
+  background: linear-gradient(45deg, #4ac8ae, #3aa892);
+  border: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-theme:hover {
+  background: linear-gradient(45deg, #3aa892, #2f8a77);
+  box-shadow: 0 4px 12px rgba(74, 200, 174, 0.3);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.divider-line {
+  background-color: #e9ecef;
+  height: 2px;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.divider-text {
+  position: relative;
+  z-index: 2;
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+@media (max-width: 992px) {
+  .card {
+    a {
+      padding: 7px !important;
+    }
+  }
+
+  .card-body {
+    padding: 1.5rem;
+  }
+
+  .icon-container {
+    font-size: 1.75rem;
+    height: 70px;
+    margin-top: -50px;
+    width: 70px;
+  }
+
+  .card-header-img {
+    height: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    max-height: 360px !important;
+    max-width: 400px !important;
+  }
+
+  .divider-line,
+  .divider-text {
+    display: none;
+  }
+
+  .card-role {
+    margin-bottom: 2rem;
+  }
+}

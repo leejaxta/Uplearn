@@ -1,0 +1,505 @@
+<div class="modal-overlay">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <div
+      class="modal-header d-flex justify-content-between align-items-center p-3 border-bottom"
+    >
+      <h4 class="m-0">{{ courseId ? "Edit Course" : "Create New Course" }}</h4>
+      <button type="button" class="btn-close" (click)="cancel()"></button>
+    </div>
+
+    <div class="modal-body p-4">
+      <form [formGroup]="courseForm" (ngSubmit)="submit()" class="container">
+        <div class="card shadow-sm border-0 rounded-3 p-4 mb-4">
+          <h5 class="fw-bold mb-3">Course Details</h5>
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Course Title</label>
+            <input
+              formControlName="title"
+              class="form-control form-control-lg"
+              placeholder="Enter course title"
+              [class.is-invalid]="showError('title')"
+            />
+            <div *ngIf="showError('title')" class="invalid-feedback d-block">
+              {{ getErrorMessage("title") }}
+            </div>
+          </div>
+          <div class="mb-4">
+            <label class="form-label fw-semibold">Description</label>
+            <textarea
+              formControlName="description"
+              rows="4"
+              class="form-control"
+              placeholder="Describe what students will learn"
+              [class.is-invalid]="showError('description')"
+            ></textarea>
+            <div
+              *ngIf="showError('description')"
+              class="invalid-feedback d-block"
+            >
+              {{ getErrorMessage("description") }}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label class="form-label fw-semibold">Price (Rs)</label>
+              <div class="input-group">
+                <span class="input-group-text bg-light">₹</span>
+                <input
+                  formControlName="price"
+                  type="number"
+                  class="form-control"
+                  placeholder="Enter price"
+                  [class.is-invalid]="showError('price')"
+                />
+              </div>
+              <div *ngIf="showError('price')" class="invalid-feedback d-block">
+                {{ getErrorMessage("price") }}
+              </div>
+            </div>
+          </div>
+          <div class="mb-4">
+            <label class="form-label fw-semibold">Course Thumbnail</label>
+            <div
+              class="file-upload-card p-3 border rounded-3"
+              [class.border-danger]="showError('image')"
+            >
+              <i class="bi bi-image text-theme fs-4 mb-2 d-block"></i>
+              <input
+                type="file"
+                class="form-control"
+                (change)="onImageChange($event)"
+              />
+              <small class="text-muted">Upload a course cover image</small>
+            </div>
+
+            <div
+              *ngIf="imagePreview"
+              class="mt-3 position-relative d-inline-block border rounded-3 p-2"
+            >
+              <img
+                [src]="imagePreview"
+                alt="Course Image Preview"
+                class="img-fluid rounded"
+                style="max-width: 200px; max-height: 150px; object-fit: cover"
+              />
+              <button
+                type="button"
+                class="btn btn-sm btn-danger position-absolute top-0 end-0 p-1 py-0"
+                (click)="removeImage()"
+              >
+                <i class="bi bi-x"></i>
+              </button>
+            </div>
+            <div *ngIf="showError('image')" class="text-danger mt-2">
+              {{ getErrorMessage("image") }}
+            </div>
+          </div>
+        </div>
+
+        <div class="card shadow-sm border-0 rounded-3 p-4 mb-4">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h5 class="fw-bold mb-0">Course Topics</h5>
+            <button
+              type="button"
+              class="btn btn-theme btn-class"
+              (click)="addTopic()"
+            >
+              <i class="bi bi-plus-circle me-2"></i>Add Topic
+            </button>
+          </div>
+
+          <div *ngIf="showError('topics')" class="alert alert-danger mb-3">
+            {{ getErrorMessage("topics") }}
+          </div>
+
+          <div formArrayName="topics">
+            <div
+              *ngFor="let topic of topics.controls; let i = index"
+              [formGroupName]="i"
+              class="topic-card border rounded-3 p-4 mb-4"
+              [class.border-danger]="hasTopicError(i)"
+            >
+              <div
+                class="d-flex justify-content-between align-items-center mb-3"
+              >
+                <h6 class="fw-semibold text-theme mb-0">Topic {{ i + 1 }}</h6>
+                <button
+                  type="button"
+                  class="btn btn-sm btn-outline-danger"
+                  (click)="removeTopic(i)"
+                >
+                  <i class="bi bi-trash"></i>
+                </button>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label fw-medium">Topic Title</label>
+                <input
+                  formControlName="title"
+                  class="form-control"
+                  placeholder="Enter topic title"
+                  [class.is-invalid]="showTopicError(i, 'title')"
+                />
+                <div
+                  *ngIf="showTopicError(i, 'title')"
+                  class="invalid-feedback d-block"
+                >
+                  {{ getTopicErrorMessage(i, "title") }}
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label fw-medium">Description</label>
+                <textarea
+                  formControlName="description"
+                  rows="4"
+                  class="form-control"
+                  placeholder="Describe what students will learn"
+                  [class.is-invalid]="showTopicError(i, 'description')"
+                ></textarea>
+                <div
+                  *ngIf="showTopicError(i, 'description')"
+                  class="invalid-feedback d-block"
+                >
+                  {{ getTopicErrorMessage(i, "description") }}
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label class="form-label fw-medium">Video Content</label>
+                  <div
+                    class="file-upload-card p-3 border rounded-3"
+                    [class.border-danger]="showTopicError(i, 'video')"
+                  >
+                    <i
+                      class="bi bi-camera-video text-theme fs-4 mb-2 d-block"
+                    ></i>
+                    <input
+                      type="file"
+                      class="form-control"
+                      (change)="onFileChange($event, i, 'video')"
+                    />
+                    <div
+                      *ngIf="existingVideos[i]"
+                      class="mt-2 p-2 bg-light border rounded"
+                    >
+                      <small class="text-muted d-block">Current Video:</small>
+                      <a
+                        [href]="existingVideos[i].path"
+                        target="_blank"
+                        class="text-decoration-none text-primary fw-medium"
+                      >
+                        <i class="bi bi-play-circle me-1"></i>
+                        {{ existingVideos[i].name }}
+                      </a>
+                    </div>
+                    <small class="text-muted">Upload video lecture</small>
+                  </div>
+                  <div
+                    *ngIf="showTopicError(i, 'video')"
+                    class="text-danger mt-2"
+                  >
+                    {{ getTopicErrorMessage(i, "video") }}
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label class="form-label fw-medium"
+                    >Documents & Resources</label
+                  >
+                  <div
+                    class="file-upload-card p-3 border rounded-3"
+                    [class.border-danger]="showTopicError(i, 'docs')"
+                  >
+                    <i
+                      class="bi bi-file-earmark-text text-theme fs-4 mb-2 d-block"
+                    ></i>
+                    <input
+                      type="file"
+                      class="form-control"
+                      multiple
+                      (change)="onFileChange($event, i, 'docs')"
+                    />
+                    <div
+                      *ngIf="existingDocs[i] && existingDocs[i].length > 0"
+                      class="mt-2 p-2 bg-light border rounded"
+                    >
+                      <small class="text-muted d-block"
+                        >Current Documents:</small
+                      >
+                      <div
+                        *ngFor="let doc of existingDocs[i]; let di = index"
+                        class="mb-1"
+                      >
+                        <a
+                          [href]="doc.path"
+                          target="_blank"
+                          class="text-decoration-none text-primary fw-medium"
+                        >
+                          <i class="bi bi-file-earmark-text me-1"></i>
+                          {{ doc.name }}
+                        </a>
+                      </div>
+                    </div>
+                    <small class="text-muted">PDFs, slides, etc.</small>
+                  </div>
+                  <div
+                    *ngIf="showTopicError(i, 'docs')"
+                    class="text-danger mt-2"
+                  >
+                    {{ getTopicErrorMessage(i, "docs") }}
+                  </div>
+                </div>
+              </div>
+
+              <div
+                formGroupName="quiz"
+                class="quiz-section mt-4 p-3 bg-light rounded-3"
+                [class.border-danger]="showTopicError(i, 'questions')"
+              >
+                <h6 class="fw-semibold mb-3">Topic Quiz</h6>
+
+                <div
+                  *ngIf="showTopicError(i, 'questions')"
+                  class="alert alert-danger mb-3"
+                >
+                  {{ getTopicErrorMessage(i, "questions") }}
+                </div>
+
+                <div formArrayName="questions">
+                  <div
+                    *ngFor="let q of getQuestions(i).controls; let qi = index"
+                    [formGroupName]="qi"
+                    class="question-card border-0 rounded-3 p-3 mb-3 bg-white shadow-sm"
+                    [class.border-danger]="hasQuestionError(i, qi)"
+                  >
+                    <div
+                      class="d-flex justify-content-between align-items-center mb-2"
+                    >
+                      <label class="form-label fw-medium mb-0"
+                        >Question {{ qi + 1 }}</label
+                      >
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-outline-danger"
+                        (click)="removeQuestion(i, qi)"
+                      >
+                        <i class="bi bi-x-lg"></i>
+                      </button>
+                    </div>
+
+                    <input
+                      formControlName="q"
+                      class="form-control mb-3"
+                      placeholder="Enter your question here"
+                      [class.is-invalid]="showQuestionError(i, qi, 'q')"
+                    />
+                    <div
+                      *ngIf="showQuestionError(i, qi, 'q')"
+                      class="invalid-feedback d-block"
+                    >
+                      {{ getQuestionErrorMessage(i, qi, "q") }}
+                    </div>
+
+                    <div formArrayName="options">
+                      <label class="form-label fw-medium">Options</label>
+                      <div
+                        *ngIf="showQuestionError(i, qi, 'options')"
+                        class="text-danger mb-2"
+                      >
+                        {{ getQuestionErrorMessage(i, qi, "options") }}
+                      </div>
+                      <div
+                        *ngFor="
+                          let opt of getOptions(i, qi).controls;
+                          let oi = index
+                        "
+                        class="input-group mb-2"
+                      >
+                        <span class="input-group-text bg-light"
+                          >{{ oi + 1 }}.</span
+                        >
+                        <input
+                          [formControlName]="oi"
+                          class="form-control"
+                          placeholder="Option {{ oi + 1 }}"
+                          [class.is-invalid]="showOptionError(i, qi, oi)"
+                        />
+                        <div
+                          *ngIf="showOptionError(i, qi, oi)"
+                          class="invalid-feedback d-block"
+                        >
+                          {{ getOptionErrorMessage(i, qi, oi) }}
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="mt-3">
+                      <label class="form-label fw-medium">Correct Answer</label>
+                      <select
+                        formControlName="answer"
+                        class="form-select"
+                        [class.is-invalid]="showQuestionError(i, qi, 'answer')"
+                      >
+                        <option value="" disabled>Select correct answer</option>
+                        <option
+                          *ngFor="
+                            let opt of getOptions(i, qi).value;
+                            let oi = index
+                          "
+                          [value]="opt"
+                        >
+                          {{ opt || "Option " + (oi + 1) }}
+                        </option>
+                      </select>
+                      <div
+                        *ngIf="showQuestionError(i, qi, 'answer')"
+                        class="invalid-feedback d-block"
+                      >
+                        {{ getQuestionErrorMessage(i, qi, "answer") }}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  class="btn btn-outline-theme btn-sm mt-2"
+                  (click)="addQuestion(i)"
+                >
+                  <i class="bi bi-plus-circle me-1"></i>Add Question
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="card shadow-sm border-0 rounded-3 p-4 mb-4"
+          formGroupName="finalQuiz"
+        >
+          <h5 class="fw-bold mb-4">Final Quiz</h5>
+
+          <div *ngIf="showError('finalQuiz')" class="alert alert-danger mb-3">
+            {{ getErrorMessage("finalQuiz") }}
+          </div>
+
+          <div formArrayName="questions">
+            <div
+              *ngFor="let fq of finalQuizQuestions.controls; let fqi = index"
+              [formGroupName]="fqi"
+              class="question-card border-0 rounded-3 p-3 mb-3 bg-white shadow-sm"
+              [class.border-danger]="hasFinalQuestionError(fqi)"
+            >
+              <div
+                class="d-flex justify-content-between align-items-center mb-2"
+              >
+                <label class="form-label fw-medium mb-0"
+                  >Question {{ fqi + 1 }}</label
+                >
+                <button
+                  type="button"
+                  class="btn btn-sm btn-outline-danger"
+                  (click)="removeFinalQuestion(fqi)"
+                >
+                  <i class="bi bi-x-lg"></i>
+                </button>
+              </div>
+
+              <input
+                formControlName="q"
+                class="form-control mb-3"
+                placeholder="Enter your question here"
+                [class.is-invalid]="showFinalQuestionError(fqi, 'q')"
+              />
+              <div
+                *ngIf="showFinalQuestionError(fqi, 'q')"
+                class="invalid-feedback d-block"
+              >
+                {{ getFinalQuestionErrorMessage(fqi, "q") }}
+              </div>
+
+              <div formArrayName="options">
+                <label class="form-label fw-medium">Options</label>
+                <div
+                  *ngIf="showFinalQuestionError(fqi, 'options')"
+                  class="text-danger mb-2"
+                >
+                  {{ getFinalQuestionErrorMessage(fqi, "options") }}
+                </div>
+                <div
+                  *ngFor="
+                    let opt of getFinalQuizOptions(fqi).controls;
+                    let foi = index
+                  "
+                  class="input-group mb-2"
+                >
+                  <span class="input-group-text bg-light">{{ foi + 1 }}.</span>
+                  <input
+                    [formControlName]="foi"
+                    class="form-control"
+                    placeholder="Option {{ foi + 1 }}"
+                    [class.is-invalid]="showFinalOptionError(fqi, foi)"
+                  />
+                  <div
+                    *ngIf="showFinalOptionError(fqi, foi)"
+                    class="invalid-feedback d-block"
+                  >
+                    {{ getFinalOptionErrorMessage(fqi, foi) }}
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-3">
+                <label class="form-label fw-medium">Correct Answer</label>
+                <select
+                  formControlName="answer"
+                  class="form-select"
+                  [class.is-invalid]="showFinalQuestionError(fqi, 'answer')"
+                >
+                  <option value="" disabled>Select correct answer</option>
+                  <option
+                    *ngFor="
+                      let fopt of getFinalQuizOptions(fqi).value;
+                      let foi = index
+                    "
+                    [value]="fopt"
+                  >
+                    {{ fopt || "Option " + (foi + 1) }}
+                  </option>
+                </select>
+                <div
+                  *ngIf="showFinalQuestionError(fqi, 'answer')"
+                  class="invalid-feedback d-block"
+                >
+                  {{ getFinalQuestionErrorMessage(fqi, "answer") }}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button
+            type="button"
+            class="btn btn-outline-theme btn-sm mb-4"
+            (click)="addFinalQuestion()"
+          >
+            <i class="bi bi-plus-circle me-1"></i>Add Question
+          </button>
+        </div>
+
+        <div class="text-end">
+          <button
+            type="button"
+            class="btn btn-secondary me-2 btn-class"
+            (click)="cancel()"
+          >
+            Cancel
+          </button>
+          <button type="submit" class="btn btn-theme btn-class">
+            <i class="bi bi-check-circle me-2"></i
+            >{{ courseId ? "Update Course" : "Create Course" }}
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

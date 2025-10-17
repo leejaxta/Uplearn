@@ -1,0 +1,159 @@
+.courses {
+  min-height: 100vh;
+  padding-inline: 7rem;
+}
+
+.text-theme {
+  color: #4ac8ae;
+}
+
+.container-fluid {
+  min-height: 100vh;
+}
+
+.bg-theme {
+  background-color: #4ac8ae;
+  color: white;
+}
+
+.btn-theme {
+  background: #58d8af;
+  border: none;
+  color: white;
+}
+
+.btn-theme:hover {
+  background: #46b995;
+  color: white;
+}
+
+.btn-outline-theme {
+  border-color: #4ac8ae;
+  color: #4ac8ae;
+}
+
+.btn-outline-theme:hover {
+  background-color: #4ac8ae;
+  color: white;
+}
+
+.btn-outline-theme.active {
+  background-color: #4ac8ae;
+  color: white;
+}
+
+.course-card {
+  max-width: 400px;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.course-card:hover {
+  transform: translateY(-4px);
+}
+
+.no-active-style:focus,
+.no-active-style:active,
+.no-active-style:hover,
+.no-active-style:focus-visible {
+  background-color: inherit !important;
+  border-color: #ccc !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.active-style:focus,
+.active-style:active,
+.active-style:focus-visible {
+  border-color: #4ac8ae !important;
+  border-radius: 4px !important;
+  box-shadow: 0 0 0 1px rgba(74, 200, 174, 0.5) !important;
+  outline: none !important;
+}
+
+.dropdown-item.no-active-style:hover,
+.dropdown-item.no-active-style:focus,
+.dropdown-item.no-active-style:active {
+  background-color: #f4f7f6 !important;
+  color: inherit !important;
+}
+
+.course-image-container {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.course-image-container img {
+  background-color: #f8f9fa;
+  height: 200px;
+  object-position: center;
+  width: 100%;
+}
+
+.price-badge {
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+
+.price-badge:not(.free) {
+  background-color: #28a745;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+.price-badge.free {
+  background-color: #4ac8ae;
+  color: white;
+}
+
+.list-badge {
+  right: 10px;
+  top: 10px;
+}
+
+.instructor-info {
+  align-items: center;
+  display: flex;
+}
+
+.truncate {
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .list-layout .row .col-md-3 {
+    height: 200px;
+  }
+
+  .price-badge {
+    font-size: 0.75rem;
+    padding: 3px 8px;
+  }
+
+  .row.align-items-end > div {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  .courses {
+    padding-inline: 3rem;
+  }
+}
+
+@media (max-width: 604px) {
+  .courses {
+    padding-inline: 1rem;
+  }
+}

@@ -1,0 +1,200 @@
+<app-navbar />
+<div class="container-fluid py-4">
+  <app-model
+    [title]="'Ready for the Quiz?'"
+    [(show)]="startModalVisible"
+    (showChange)="onModalClose($event)"
+  >
+    <div class="text-center">
+      <div class="mb-4">
+        <i class="bi bi-patch-question display-4 text-theme"></i>
+      </div>
+      <h4 class="fw-bold mb-3">
+        {{ type === "topic" ? topic.title + " Quiz" : "Final Quiz" }}
+      </h4>
+      <p class="text-muted mb-2">Total Questions: {{ quiz.length || 0 }}</p>
+      <p class="text-muted mb-3">
+        Time Limit: {{ calculateTimeLimit() }} minutes
+      </p>
+      <div class="alert alert-info">
+        <i class="bi bi-info-circle me-2"></i>
+        Complete all questions before time runs out!
+      </div>
+    </div>
+    <div modal-footer class="justify-content-center">
+      <button type="button" class="btn btn-theme px-5" (click)="startQuiz()">
+        <i class="bi bi-play-fill me-2"></i>Start Quiz
+      </button>
+    </div>
+  </app-model>
+
+  <app-model
+    [title]="'Quiz Completed'"
+    [(show)]="quizCompletedModalVisible"
+    (showChange)="onModalClose($event)"
+  >
+    <div class="text-center">
+      <div class="mb-4">
+        <i
+          class="display-4"
+          [ngClass]="{
+            'bi bi-check-circle text-success': allCorrect,
+            'bi bi-x-circle text-danger': !allCorrect
+          }"
+        ></i>
+      </div>
+
+      <h4 class="fw-bold mb-2">
+        {{ allCorrect ? "Congratulations!" : "Quiz Incomplete" }}
+      </h4>
+
+      <p class="mb-0">
+        {{ quizResultMessage }}
+      </p>
+    </div>
+
+    <div modal-footer class="justify-content-center mt-3">
+      <button
+        type="button"
+        class="btn"
+        [ngClass]="allCorrect ? ' btn-theme ' : 'btn-warning'"
+        (click)="allCorrect ? onModalClose(!allCorrect) : tryAgain()"
+      >
+        <i
+          [ngClass]="{
+            'bi bi-check-lg me-2': allCorrect,
+            'bi bi-arrow-repeat me-2': !allCorrect
+          }"
+        ></i>
+        {{ allCorrect ? "OK" : "Try Again" }}
+      </button>
+    </div>
+  </app-model>
+
+  <app-model
+    [title]="'Time\'s Up!'"
+    [(show)]="timeExpiredModalVisible"
+    (showChange)="onModalClose($event)"
+  >
+    <div class="text-center">
+      <div class="mb-4">
+        <i class="bi bi-clock-history display-4 text-danger"></i>
+      </div>
+      <h4 class="fw-bold mb-3">Quiz Time Expired</h4>
+      <p class="text-muted mb-3">You ran out of time to complete the quiz.</p>
+      <div class="alert alert-warning">
+        <i class="bi bi-exclamation-triangle me-2"></i>
+        The quiz cannot be continued after time expiration.
+      </div>
+    </div>
+    <div modal-footer class="justify-content-center">
+      <button type="button" class="btn btn-theme px-5" (click)="tryAgain()">
+        <i class="bi bi-arrow-repeat me-2"></i>Try Again
+      </button>
+    </div>
+  </app-model>
+
+  <div class="countdown-overlay" *ngIf="showCountdown">
+    <div class="countdown-container">
+      <div class="countdown-number" [class.active]="countdownValue === 3">
+        3
+      </div>
+      <div class="countdown-number" [class.active]="countdownValue === 2">
+        2
+      </div>
+      <div class="countdown-number" [class.active]="countdownValue === 1">
+        1
+      </div>
+      <div class="countdown-number" [class.active]="countdownValue === 0">
+        Start!
+      </div>
+    </div>
+  </div>
+  <div
+    class="row justify-content-center"
+    *ngIf="quizStarted && !showCountdown && !timeExpired"
+  >
+    <div class="col-lg-8">
+      <div class="card shadow-sm border-0 rounded-4">
+        <div class="card-header bg-white py-3">
+          <div class="d-flex justify-content-between align-items-center">
+            <h3 class="fw-bold mb-0 text-theme">
+              <i class="bi bi-patch-question me-2"></i>
+              {{ type === "topic" ? topic.title + " Quiz" : "Final Quiz" }}
+            </h3>
+            <div class="quiz-timer" [class.warning]="remainingTime < 60">
+              <i class="bi bi-clock me-2"></i>
+              {{ formatTime(remainingTime) }}
+            </div>
+          </div>
+          <div class="progress mt-3" style="height: 6px">
+            <div
+              class="progress-bar bg-theme"
+              role="progressbar"
+              [style.width.%]="progress"
+            ></div>
+          </div>
+          <div class="d-flex justify-content-between mt-2">
+            <small class="text-muted"
+              >Question {{ currentQuestionIndex + 1 }} of
+              {{ quiz.length }}</small
+            >
+            <small class="text-muted">{{ progress }}% Complete</small>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <div *ngIf="currentQuestion" class="question-container">
+            <h4 class="fw-semibold mb-4">{{ currentQuestion.q }}</h4>
+
+            <div class="options-container">
+              <div
+                *ngFor="let option of currentQuestion.options; let i = index"
+                class="option-card"
+                [class.selected]="userAnswers[currentQuestionIndex] === option"
+                (click)="selectAnswer(option)"
+              >
+                <div class="option-letter">{{ getOptionLetter(i) }}</div>
+                <div class="option-text">{{ option }}</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-between mt-5 pt-3 border-top">
+            <button
+              class="btn btn-outline-theme"
+              [disabled]="currentQuestionIndex === 0"
+              (click)="previousQuestion()"
+            >
+              <i class="bi bi-chevron-left me-1"></i> Previous
+            </button>
+
+            <span class="d-flex align-items-center text-muted">
+              Question {{ currentQuestionIndex + 1 }} of
+              {{ quiz.length }}
+            </span>
+
+            <button
+              *ngIf="currentQuestionIndex < (quiz?.length || 0) - 1"
+              class="btn btn-theme"
+              (click)="nextQuestion()"
+              [disabled]="!userAnswers[currentQuestionIndex]"
+            >
+              Next <i class="bi bi-chevron-right ms-1"></i>
+            </button>
+
+            <button
+              *ngIf="currentQuestionIndex === (quiz?.length || 0) - 1"
+              class="btn btn-theme"
+              (click)="submitQuiz()"
+              [disabled]="!userAnswers[currentQuestionIndex]"
+            >
+              <i class="bi bi-check-circle me-1"></i> Submit Quiz
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer />

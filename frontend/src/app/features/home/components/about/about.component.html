@@ -1,0 +1,141 @@
+<app-navbar />
+
+<div class="about-wrapper">
+  <section class="story-intro">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-lg-5">
+          <h1 class="display-3 fw-bold">
+            We didn't build a
+            <strong class="text-highlight">platform.</strong><br />
+            We built a <strong class="text-highlight">movement.</strong>
+          </h1>
+          <p class="lead mt-4">
+            From a garage, a dream, and 3 burnt laptops — we created a space
+            where learning feels like discovery, not duty.
+          </p>
+          <button class="btn btn-explore mt-4" (click)="scrollToSection()">
+            Explore Our Journey →
+          </button>
+        </div>
+        <div class="col-12 col-lg-7 mt-5 mt-lg-0">
+          <div class="story-image">
+            <img
+              src="../../../../assets/story-hero.png"
+              alt="Our Story"
+              class="img-fluid"
+            />
+            <div class="stat-badge stat-left">
+              <strong [appCountUp]="16" [suffix]="'yrs'"></strong>
+              <small>Changing how the world learns</small>
+            </div>
+            <div class="stat-badge stat-right">
+              <strong [appCountUp]="15" [suffix]="'K+'"></strong>
+              <small>Learners transformed</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="timeline-section" id="timeline" #timelineSection>
+    <div class="container">
+      <h2 class="text-center mb-5">
+        How a <strong class="text-highlight">Crazy Idea</strong> Became a Global
+        Classroom
+      </h2>
+
+      <div class="timeline">
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <div class="badge">2008</div>
+            <h4>The Garage Days</h4>
+            <p>
+              Two teachers + one developer + too much coffee. We believed
+              learning shouldn't be locked behind expensive textbooks or rigid
+              schedules.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item right">
+          <div class="timeline-content">
+            <div class="badge">2012</div>
+            <h4>First 1,000 Students</h4>
+            <p>
+              Our free Python course went viral. We cried. Then we hired our
+              first tutor — a retired professor who taught in pajamas.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <div class="badge">2018</div>
+            <h4>Global</h4>
+            <p>
+              Launched in 12 languages. Students from Nepal to Norway. One even
+              finished a course while hiking Everest Base Camp. True story.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item right">
+          <div class="timeline-content">
+            <div class="badge">2024</div>
+            <h4>What's Next?</h4>
+            <p>
+              AI tutors that adapt to your mood. VR classrooms on Mars (beta).
+              And yes — we're still drinking too much coffee.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="culture-section">
+    <div class="container text-center mb-5">
+      <h2 class="mb-4">
+        Not Just a Company — <strong class="text-highlight">A Culture</strong>
+      </h2>
+      <p class="lead mx-auto" style="max-width: 700px">
+        We measure success in “aha!” moments, not just analytics.
+      </p>
+    </div>
+
+    <div class="container">
+      <div class="row g-4 justify-content-center">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="culture-card">
+            <h4>No Boring Lessons</h4>
+            <p>
+              If a course feels like homework, we scrap it. Learning should feel
+              like unlocking superpowers.
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="culture-card">
+            <h4>Humans First</h4>
+            <p>
+              We reply to every email. Even the rants. Especially the rants.
+              You're family here.
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="culture-card">
+            <h4>Fail Fast, Learn Faster</h4>
+            <p>
+              We've shipped weird ideas. Some flopped. Some became legends.
+              That's how magic happens.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<app-footer />

@@ -1,0 +1,26 @@
+<app-navbar />
+
+<div class="payment-container failure">
+  <div class="icon-wrapper">
+    <div class="x-circle">
+      <svg viewBox="0 0 52 52" class="x-icon">
+        <circle class="x__circle" cx="26" cy="26" r="25" fill="none" />
+        <path class="x__line1" d="M16,16 l20,20" />
+        <path class="x__line2" d="M36,16 l-20,20" />
+      </svg>
+    </div>
+  </div>
+
+  <h1>Payment Failed</h1>
+  <p class="subtitle">
+    Something went wrong with your payment. Don't worry — you can try again!
+  </p>
+
+  <div class="button-group">
+    <button class="btn-retry" (click)="retryPayment()">Retry Payment</button>
+    <button class="btn-support" (click)="contactSupport()">
+      Contact Support
+    </button>
+  </div>
+</div>
+<app-footer />

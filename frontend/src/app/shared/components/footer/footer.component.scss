@@ -1,0 +1,42 @@
+$theme-color: #20b486;
+$footer-bg: #1a1f25;
+
+.app-footer {
+  background-color: $footer-bg;
+  color: #ffffff;
+  margin-top: auto;
+
+  .footer-brand h5 {
+    color: $theme-color;
+  }
+
+  .footer-link {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $theme-color;
+      text-decoration: none;
+    }
+  }
+
+  .hover-opacity-100 {
+    transition: opacity 0.2s;
+    &:hover {
+      opacity: 1 !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .row > [class*="col-"] {
+      flex: 1 0 100% !important;
+    }
+  }
+}
+
+@media (max-width: 788px) {
+  footer {
+    margin-bottom: 64px;
+  }
+}

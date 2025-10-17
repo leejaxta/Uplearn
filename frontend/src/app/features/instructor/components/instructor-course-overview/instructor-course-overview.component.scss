@@ -1,0 +1,73 @@
+$theme-color: #20b486;
+
+.overview-container {
+  padding-inline: clamp(1rem, 5vw, 4rem);
+
+  .course-header {
+    border-left: 4px solid #20b486;
+  }
+
+  .cards-container {
+    .overview-card {
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      flex: 1 1 250px;
+      padding: 1rem;
+
+      .card-title {
+        color: #666;
+        font-size: 0.85rem;
+        letter-spacing: 0.5px;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+      }
+
+      .card-value {
+        color: $theme-color;
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+
+      .icon-wrapper i {
+        line-height: 1;
+      }
+    }
+  }
+
+  .chart-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+
+  .no-active-style:focus,
+  .no-active-style:active,
+  .no-active-style:focus-visible {
+    background-color: inherit !important;
+    border-color: #ccc !important;
+    box-shadow: none !important;
+    color: black !important;
+    outline: none !important;
+  }
+
+  .chart-container {
+    height: 450px;
+    max-width: 900px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 788px) {
+  .overview-container {
+    margin-bottom: 80px !important;
+    padding-inline: 1rem;
+  }
+
+  .chart-container {
+    height: 380px;
+  }
+}

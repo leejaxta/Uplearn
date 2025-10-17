@@ -1,0 +1,32 @@
+.toast {
+  align-items: center;
+  background-color: #fff;
+  border-left: 6px solid transparent;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  display: flex;
+  max-width: 400px;
+  min-width: 280px;
+  padding: 0.75rem 1rem;
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+  z-index: 1000;
+
+  &.error {
+    border-left-color: #dc3545;
+  }
+  &.success {
+    border-left-color: #28a745;
+  }
+
+  .toast-bar {
+    height: 100%;
+    margin-right: 0.75rem;
+    width: 6px;
+  }
+  .toast-message {
+    color: #333;
+    font-size: 0.9rem;
+  }
+}

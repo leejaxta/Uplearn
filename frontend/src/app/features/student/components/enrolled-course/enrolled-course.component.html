@@ -1,0 +1,284 @@
+<app-navbar />
+<div class="container-fluid py-4" *ngIf="!loading && course">
+  <div class="row mb-4">
+    <div class="col-12">
+      <div class="card shadow-sm border-0 rounded-4 overflow-hidden">
+        <div class="row g-0">
+          <div class="col-lg-7 col-xl-6">
+            <img
+              [src]="course.image"
+              alt="{{ course.title }}"
+              class="img-fluid w-100 h-100 object-fit-cover"
+            />
+          </div>
+          <div class="col-lg-5 col-xl-6 course">
+            <div class="card-body p-4">
+              <span class="badge bg-theme fs-6 p-2 mb-2">Enrolled</span>
+              <h1 class="fw-bold text-dark mb-2">{{ course.title }}</h1>
+              <p class="text-muted mb-0">
+                {{ course.description }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-4">
+    <div class="col-12">
+      <div class="card shadow-sm border-0 rounded-4">
+        <div class="card-body py-3">
+          <h5 class="fw-bold mb-3">Course Topics</h5>
+          <div class="topics-scroll-container">
+            <div class="topics-scroll">
+              <div
+                *ngFor="let topic of topics; let i = index"
+                class="topic-tab"
+                [class.active]="currentTopicIndex === i"
+                (click)="selectTopic(i)"
+              >
+                <div class="topic-tab-content">
+                  <span class="topic-number">{{ i + 1 }}</span>
+                  <span class="topic-title">{{ topic.title }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="currentTopic">
+    <div class="col-12">
+      <div class="card shadow-sm border-0 rounded-4">
+        <div class="card-header bg-white py-3">
+          <h3 class="fw-bold mb-0 d-flex align-items-center">
+            <span class="topic-number badge bg-theme me-3">{{
+              currentTopicIndex + 1
+            }}</span>
+            {{ currentTopic.title }}
+          </h3>
+        </div>
+
+        <div class="card-body">
+          <div
+            class="row gap-4"
+            *ngIf="currentTopic.video || currentTopic.description"
+          >
+            <div class="col-lg-6 mb-4" *ngIf="currentTopic.video">
+              <div class="sticky-top" style="top: 20px; z-index: 0">
+                <h6 class="fw-semibold text-theme mb-3">
+                  <i class="bi bi-play-circle-fill me-2"></i>Video Lesson
+                </h6>
+                <div
+                  class="ratio ratio-16x9 rounded-3 shadow-sm video-container"
+                >
+                  <video
+                    #videoPlayer
+                    [src]="currentTopic.video"
+                    controls
+                    playsinline
+                    class="w-100 h-100 rounded"
+                    (timeupdate)="onTimeUpdate()"
+                  ></video>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-5 mb-4" *ngIf="currentTopic.description">
+              <h6 class="fw-semibold text-theme mb-3">
+                <i class="bi bi-journal-text me-2"></i>About This Topic
+              </h6>
+              <div class="topic-description-content">
+                <p class="text-muted">{{ currentTopic.description }}</p>
+                <div class="topic-meta mt-4 p-3 bg-light rounded-3">
+                  <h6 class="fw-semibold text-theme mb-3">Topic Details</h6>
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="d-flex align-items-center mb-2">
+                        <i class="bi bi-clock text-theme me-2"></i>
+                        <span class="text-muted">Duration: 15 min</span>
+                      </div>
+                      <div class="d-flex align-items-center mb-2">
+                        <i class="bi bi-play-circle text-theme me-2"></i>
+                        <span class="text-muted">Video: 1 lesson</span>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="d-flex align-items-center mb-2">
+                        <i class="bi bi-file-text text-theme me-2"></i>
+                        <span class="text-muted"
+                          >Resources:
+                          {{ currentTopic.files?.length || 0 }}</span
+                        >
+                      </div>
+                      <div class="d-flex align-items-center mb-2">
+                        <i class="bi bi-check-circle text-theme me-2"></i>
+                        <span class="text-muted">Quiz: Available</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            *ngIf="currentTopic.files && currentTopic.files.length > 0"
+            class="mb-4 mt-4"
+          >
+            <h6 class="fw-semibold text-theme mb-3">
+              <i class="bi bi-file-earmark me-2"></i>Resources
+            </h6>
+            <div class="row">
+              <div
+                class="col-md-6 col-lg-4 mb-3"
+                *ngFor="let file of currentTopic.files"
+              >
+                <div class="card border-0 shadow-sm h-100 resource-card">
+                  <div class="card-body">
+                    <div class="d-flex align-items-center">
+                      <div class="file-icon me-3">
+                        <i class="bi bi-file-earmark-text fs-4 text-theme"></i>
+                      </div>
+                      <div class="file-info flex-grow-1">
+                        <h6 class="mb-0 fw-semibold text-truncate">
+                          {{ file.name }}
+                        </h6>
+                        <small class="text-muted"
+                          >{{ getFileType(file.name) }} •
+                          {{ getFileSize(file.size) }}</small
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer bg-transparent border-0 pt-0">
+                    <a
+                      [href]="file.path"
+                      target="_blank"
+                      class="btn btn-theme btn-sm w-100"
+                    >
+                      <i class="bi bi-download me-1"></i> Open Resource
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-4 pt-3 border-top">
+            <ng-container *ngIf="!topicCompleted; else completedTemplate">
+              <button
+                class="btn btn-theme px-5"
+                (click)="openQuiz(currentTopic)"
+              >
+                <i class="bi bi-patch-question me-2"></i> Take Topic Quiz
+              </button>
+              <p class="text-muted small mt-2">
+                Test your knowledge by completing this quiz
+              </p>
+            </ng-container>
+
+            <ng-template #completedTemplate>
+              <button class="btn btn-outline-theme" disabled>
+                <i class="bi bi-check-circle me-2"></i> Topic Quiz Completed
+              </button>
+              <p class="text-muted small mt-2">
+                You have already completed this topic's quiz
+              </p>
+            </ng-template>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-4" *ngIf="currentTopic">
+    <div class="col-12">
+      <div class="d-flex justify-content-between">
+        <button
+          class="btn btn-outline-theme"
+          *ngIf="currentTopicIndex > 0"
+          (click)="selectTopic(currentTopicIndex - 1)"
+        >
+          <i class="bi bi-chevron-left me-1"></i> Previous Topic
+        </button>
+        <span class="d-flex align-items-center text-muted">
+          Topic {{ currentTopicIndex + 1 }} of {{ topics.length }}
+        </span>
+        <button
+          class="btn btn-theme"
+          *ngIf="currentTopicIndex < topics.length - 1"
+          (click)="selectTopic(currentTopicIndex + 1)"
+        >
+          Next Topic <i class="bi bi-chevron-right ms-1"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col-12">
+      <div class="card shadow-sm border-0 rounded-4">
+        <div class="card-body text-center p-5">
+          <div class="mb-4">
+            <i class="bi bi-trophy-fill display-4 text-warning"></i>
+          </div>
+
+          <h3 class="fw-bold mb-3">Final Quiz</h3>
+
+          <ng-container *ngIf="courseCompleted; else notCompletedTemplate">
+            <p class="text-success fw-semibold mb-4">
+              Congratulations! You have completed the final quiz.
+            </p>
+            <button class="btn btn-success" (click)="getCertificate()">
+              <i class="bi bi-award me-2"></i> Get Your Certificate
+            </button>
+          </ng-container>
+
+          <ng-template #notCompletedTemplate>
+            <ng-template #lockedMessageTemplate>
+              <p class="text-muted mb-4">
+                Complete all topic quizzes to unlock the final assessment.
+              </p>
+            </ng-template>
+
+            <ng-container
+              *ngIf="allTopicsCompleted; else lockedMessageTemplate"
+            >
+              <p class="text-muted mb-4">
+                All topic quizzes are completed now.
+              </p>
+            </ng-container>
+
+            <ng-container *ngIf="allTopicsCompleted; else lockedTemplate">
+              <button class="btn btn-theme" (click)="openFinalQuiz(course.id!)">
+                <i class="bi bi-patch-question me-2"></i> Take Final Quiz
+              </button>
+            </ng-container>
+
+            <ng-template #lockedTemplate>
+              <button class="btn btn-outline-theme" disabled>
+                <i class="bi bi-lock me-2"></i> Final Quiz Locked
+              </button>
+            </ng-template>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid py-5 text-center" *ngIf="loading">
+  <div
+    class="spinner-border text-theme"
+    role="status"
+    style="width: 3rem; height: 3rem"
+  >
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <p class="mt-3 text-muted">Loading your course...</p>
+</div>
+<app-footer />

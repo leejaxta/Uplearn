@@ -1,0 +1,47 @@
+.custom-modal-backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1040;
+}
+
+.custom-modal {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1050;
+}
+
+.custom-modal-dialog {
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.custom-modal-header,
+.custom-modal-footer {
+  align-items: center;
+  border-bottom: 1px solid #dee2e6;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.custom-modal-footer {
+  border-top: 1px solid #dee2e6;
+}
+
+.custom-modal-body {
+  padding: 1rem;
+}

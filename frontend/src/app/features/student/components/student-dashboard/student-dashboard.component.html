@@ -1,0 +1,70 @@
+<app-navbar></app-navbar>
+
+<div class="dashboard-container">
+  <div class="header">
+    <h1>My Courses</h1>
+    <p>Continue your learning journey — pick up where you left off!</p>
+  </div>
+
+  <div class="loader" *ngIf="isLoading">
+    <div class="spinner"></div>
+    <p>Loading your courses...</p>
+  </div>
+
+  <div class="courses-grid" *ngIf="!isLoading">
+    <div
+      class="course-card"
+      *ngFor="let course of enrolledCourses"
+      (click)="goToCourse(course.enrollmentId)"
+    >
+      <div class="card-image">
+        <img [src]="course.courseImage" [alt]="course.courseTitle" />
+        <div class="progress-overlay">
+          <div class="progress-bar">
+            <div
+              class="progress-fill"
+              [style.width.%]="course.progressPercentage"
+            ></div>
+          </div>
+          <span class="progress-text">{{ course.progressPercentage }}%</span>
+        </div>
+      </div>
+
+      <div class="card-content">
+        <h3 class="course-title">{{ course.courseTitle }}</h3>
+        <p class="course-desc">
+          {{
+            course.courseDescription?.length! > 100
+              ? (course.courseDescription | slice : 0 : 100) + "..."
+              : course.courseDescription
+          }}
+        </p>
+
+        <div class="course-meta">
+          <div class="quizzes">
+            <strong>{{ course.completedCount }}</strong> of
+            {{ course.totalQuizzes }} quizzes
+          </div>
+          <div class="status">
+            <span class="status-badge" [ngClass]="course.status">{{
+              course.progressPercentage == 100 ? "complete" : "active"
+            }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="empty-state" *ngIf="enrolledCourses.length === 0">
+      <img
+        src="../../../../../assets/nodata.svg"
+        alt="No courses"
+        class="empty-img"
+      />
+      <h3>You're not enrolled in any courses yet!</h3>
+      <button class="btn-primary" routerLink="/home/courses">
+        Browse Courses
+      </button>
+    </div>
+  </div>
+</div>
+<app-footer />

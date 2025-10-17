@@ -1,0 +1,84 @@
+.text-theme {
+  color: #4ac8ae;
+}
+
+.bg-theme {
+  background-color: #4ac8ae;
+  color: white;
+}
+
+.container-fluid {
+  padding-inline: 2rem 7rem;
+}
+
+.btn-theme {
+  background: linear-gradient(45deg, #4ac8ae, #3aa892);
+  border: none;
+  color: white;
+}
+
+.btn-theme:hover {
+  background: linear-gradient(45deg, #3aa892, #2f8a77);
+  color: white;
+}
+
+.btn-outline-theme {
+  border-color: #4ac8ae;
+  color: #4ac8ae;
+}
+
+.btn-outline-theme:hover {
+  background-color: #4ac8ae;
+  color: white;
+}
+.card {
+  cursor: pointer;
+}
+
+.topic-card {
+  border-left: 4px solid #4ac8ae;
+  transition: all 0.3s ease;
+}
+
+.topic-card:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.question-card {
+  transition: all 0.2s ease;
+}
+
+.question-card:hover {
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.05);
+}
+
+.file-upload-card {
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.quiz-section {
+  border-left: 3px solid #4ac8ae;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #4ac8ae;
+  box-shadow: 0 0 0 0.2rem rgba(74, 200, 174, 0.25);
+}
+
+@media (max-width: 741px) {
+  .container-fluid {
+    padding-inline: 1rem 1rem !important;
+  }
+
+  .btn-create {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 788px) {
+  .container-fluid {
+    margin-bottom: 80px !important;
+  }
+}

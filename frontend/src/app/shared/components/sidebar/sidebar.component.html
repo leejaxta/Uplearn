@@ -1,0 +1,51 @@
+<div
+  [ngClass]="{
+    'sidebar-expanded': isExpanded,
+    'sidebar-collapsed': !isExpanded
+  }"
+  class="sidebar-container transition-all"
+>
+  <button class="btn btn-sm mb-4 ms-1" (click)="toggleSidebar()">
+    <i
+      class="bi"
+      [ngClass]="isExpanded ? 'bi-chevron-left' : 'bi-chevron-right'"
+    ></i>
+  </button>
+
+  <ul class="list-unstyled">
+    <li
+      class="sidebar-item mb-3"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <a
+        routerLink="/instructor/overview"
+        class="d-flex align-items-center text-decoration-none"
+      >
+        <i class="bi bi-speedometer2 me-2"></i>
+        <span *ngIf="isExpanded">Overview</span>
+      </a>
+    </li>
+
+    <li
+      class="sidebar-item mb-3"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <a
+        routerLink="/instructor/dashboard"
+        class="d-flex align-items-center text-decoration-none"
+      >
+        <i class="bi bi-journal-text me-2"></i>
+        <span *ngIf="isExpanded">My Courses</span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<div
+  class="main-content transition-all"
+  [style.marginLeft.px]="isExpanded ? 200 : 70"
+>
+  <ng-content></ng-content>
+</div>

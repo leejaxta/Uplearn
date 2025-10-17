@@ -1,0 +1,144 @@
+.modal-overlay {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  overflow-y: auto;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.modal-content {
+  animation: fadeIn 0.3s ease;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  max-width: 900px;
+  width: 100%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal-header {
+  border-bottom: 1px solid #eee;
+}
+
+.modal-body {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.text-theme {
+  color: #4ac8ae;
+}
+
+.bg-theme {
+  background-color: #4ac8ae;
+  color: white;
+}
+
+.btn-theme {
+  background: linear-gradient(45deg, #4ac8ae, #3aa892);
+  border: none;
+  color: white;
+}
+
+.btn-theme:hover {
+  background: linear-gradient(45deg, #3aa892, #2f8a77);
+  color: white;
+}
+
+.btn-outline-theme {
+  border-color: #4ac8ae;
+  color: #4ac8ae;
+}
+
+.btn-outline-theme:hover {
+  background-color: #4ac8ae;
+  color: white;
+}
+
+.topic-card {
+  border-left: 4px solid #4ac8ae;
+  transition: all 0.3s ease;
+}
+
+.topic-card:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.question-card {
+  transition: all 0.2s ease;
+}
+
+.question-card:hover {
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.05);
+}
+
+.file-upload-card {
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.quiz-section {
+  border-left: 3px solid #4ac8ae;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #4ac8ae;
+  box-shadow: 0 0 0 0.2rem rgba(74, 200, 174, 0.25);
+}
+
+a.text-primary:hover {
+  color: #0d6efd !important;
+  text-decoration: underline;
+}
+
+a i.bi {
+  vertical-align: -1px;
+}
+
+.is-invalid {
+  border-color: #dc3545 !important;
+}
+
+.border-danger {
+  border-color: #dc3545 !important;
+}
+
+.invalid-feedback {
+  color: #dc3545;
+  font-size: 0.875em;
+  margin-top: 0.25rem;
+}
+
+.file-upload-card.border-danger {
+  border-color: #dc3545 !important;
+}
+
+@media (max-width: 741px) {
+  .btn-class {
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  .modal-body {
+    padding: 5px !important;
+  }
+}

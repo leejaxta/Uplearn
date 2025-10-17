@@ -1,0 +1,224 @@
+.text-theme {
+  color: #4ac8ae !important;
+}
+
+.container-fluid {
+  min-height: 100vh;
+}
+
+.bg-theme {
+  background-color: #4ac8ae !important;
+  color: white;
+}
+
+.btn-theme {
+  background: linear-gradient(45deg, #4ac8ae, #3aa892);
+  border: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-theme:hover {
+  background: linear-gradient(45deg, #3aa892, #2f8a77);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-outline-theme {
+  border-color: #4ac8ae;
+  color: #4ac8ae;
+}
+
+.btn-outline-theme:hover {
+  background-color: #4ac8ae;
+  color: white;
+}
+
+.countdown-overlay {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.countdown-container {
+  height: 200px;
+  position: relative;
+  width: 200px;
+}
+
+.countdown-number {
+  align-items: center;
+  color: white;
+  display: flex;
+  font-size: 5rem;
+  font-weight: bold;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transform: scale(0.5);
+  transition: all 0.5s ease;
+  width: 100%;
+}
+
+.countdown-number.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.countdown-number:last-child {
+  color: #4ac8ae;
+}
+
+.quiz-timer {
+  background-color: rgba(74, 200, 174, 0.1);
+  border: 2px solid #4ac8ae;
+  border-radius: 25px;
+  color: #4ac8ae;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+}
+
+.quiz-timer.warning {
+  animation: pulse 1s infinite;
+  background-color: rgba(220, 53, 69, 0.1);
+  border-color: #dc3545;
+  color: #dc3545;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.option-card {
+  align-items: center;
+  background-color: #fff;
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  padding: 1rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.option-card:hover {
+  background-color: rgba(74, 200, 174, 0.05);
+  border-color: #4ac8ae;
+  transform: translateY(-2px);
+}
+
+.option-card.selected {
+  background-color: rgba(74, 200, 174, 0.1);
+  border-color: #4ac8ae;
+  box-shadow: 0 4px 12px rgba(74, 200, 174, 0.2);
+}
+
+.option-letter {
+  align-items: center;
+  background-color: #f8f9fa;
+  border-radius: 50%;
+  color: #6c757d;
+  display: flex;
+  font-weight: bold;
+  height: 40px;
+  justify-content: center;
+  margin-right: 1rem;
+  transition: all 0.3s ease;
+  width: 40px;
+}
+
+.option-card.selected .option-letter {
+  background-color: #4ac8ae;
+  color: white;
+}
+
+.option-text {
+  flex-grow: 1;
+  font-size: 1.1rem;
+}
+
+.progress {
+  border-radius: 10px;
+}
+
+.progress-bar {
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+.modal-content {
+  border: none;
+  border-radius: 1rem;
+}
+
+.modal-header {
+  background-color: #f8f9fa;
+  border-radius: 1rem 1rem 0 0;
+}
+
+@media (max-width: 768px) {
+  .countdown-number {
+    font-size: 3rem;
+  }
+
+  .countdown-container {
+    height: 150px;
+    width: 150px;
+  }
+
+  .option-card {
+    padding: 0.75rem 1rem;
+  }
+
+  .option-letter {
+    font-size: 0.9rem;
+    height: 35px;
+    width: 35px;
+  }
+
+  .option-text {
+    font-size: 1rem;
+  }
+
+  .quiz-timer {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .d-flex.justify-content-between {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .quiz-timer {
+    margin-top: 1rem;
+  }
+}
