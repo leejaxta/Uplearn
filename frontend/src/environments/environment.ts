@@ -7,5 +7,5 @@ export const environment = {
     messagingSenderId: '857581020260',
     appId: '1:857581020260:web:2fb491b839b5fbc9fdab71',
   },
-  baseUrl: 'http://localhost:3000',
+  baseUrl: 'https://uplearn-backend-e08l.onrender.com',
 };
