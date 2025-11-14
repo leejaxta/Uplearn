@@ -183,11 +183,11 @@ server.put(
 
         let filePath;
         if (file.mimetype.startsWith("image/")) {
-          filePath = `http://localhost:3000/uploads/images/${file.filename}`;
+          filePath = 'https://uplearn-backend-e08l.onrender.com/uploads/images/${file.filename}`;
         } else if (file.mimetype.startsWith("video/")) {
-          filePath = `http://localhost:3000/uploads/videos/${file.filename}`;
+          filePath = `https://uplearn-backend-e08l.onrender.com/uploads/videos/${file.filename}`;
         } else {
-          filePath = `http://localhost:3000/uploads/docs/${file.filename}`;
+          filePath = `https://uplearn-backend-e08l.onrender.com/uploads/docs/${file.filename}`;
         }
 
         const fileData = {
@@ -201,7 +201,7 @@ server.put(
         if (fileType === "image" && topicIndex === "-1") {
           if (existingCourse.image) {
             const oldImagePath = existingCourse.image
-              .replace("http://localhost:3000", ".")
+              .replace("https://uplearn-backend-e08l.onrender.com", ".")
               .replace("/uploads", "./uploads");
             fs.unlink(oldImagePath, (err) => {
               if (err) console.warn("Could not delete old course image:", err);
@@ -316,7 +316,7 @@ server.put(
             filesForTopic.video?.path !== existingTopics[idx].video
           ) {
             const oldVideoPath = existingTopics[idx].video
-              .replace("http://localhost:3000", ".")
+              .replace("https://uplearn-backend-e08l.onrender.com", ".")
               .replace("/uploads", "./uploads");
             fs.unlink(oldVideoPath, (err) => {
               if (err) console.warn("Could not delete old video:", err);
@@ -330,7 +330,7 @@ server.put(
             existingTopics[idx].files.forEach((file) => {
               if (file.path) {
                 const oldDocPath = file.path
-                  .replace("http://localhost:3000", ".")
+                  .replace("https://uplearn-backend-e08l.onrender.com", ".")
                   .replace("/uploads", "./uploads");
                 const isNewDoc = filesForTopic.docs.some(
                   (newDoc) => newDoc.path === file.path
@@ -514,11 +514,11 @@ server.post(
 
         let filePath;
         if (file.mimetype.startsWith("image/")) {
-          filePath = `http://localhost:3000/uploads/images/${file.filename}`;
+          filePath = `https://uplearn-backend-e08l.onrender.com/uploads/images/${file.filename}`;
         } else if (file.mimetype.startsWith("video/")) {
-          filePath = `http://localhost:3000/uploads/videos/${file.filename}`;
+          filePath = `https://uplearn-backend-e08l.onrender.com/uploads/videos/${file.filename}`;
         } else {
-          filePath = `http://localhost:3000/uploads/docs/${file.filename}`;
+          filePath = `https://uplearn-backend-e08l.onrender.com/uploads/docs/${file.filename}`;
         }
 
         const fileData = {
@@ -697,7 +697,7 @@ server.delete("/courses/:id", (req, res) => {
 
     if (course.image) {
       const imagePath = course.image
-        .replace("http://localhost:3000", ".")
+        .replace("https://uplearn-backend-e08l.onrender.com", ".")
         .replace("/uploads", "./uploads");
       filesToDelete.push(imagePath);
     }
@@ -705,7 +705,7 @@ server.delete("/courses/:id", (req, res) => {
     topics.forEach((topic) => {
       if (topic.video) {
         const videoPath = topic.video
-          .replace("http://localhost:3000", ".")
+          .replace("https://uplearn-backend-e08l.onrender.com", ".")
           .replace("/uploads", "./uploads");
         filesToDelete.push(videoPath);
       }
@@ -714,7 +714,7 @@ server.delete("/courses/:id", (req, res) => {
         topic.files.forEach((file) => {
           if (file.path) {
             const filePath = file.path
-              .replace("http://localhost:3000", ".")
+              .replace("https://uplearn-backend-e08l.onrender.com", ".")
               .replace("/uploads", "./uploads");
             filesToDelete.push(filePath);
           }
