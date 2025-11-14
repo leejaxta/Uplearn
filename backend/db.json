@@ -7,7 +7,7 @@
       "price": 1000,
       "instructorId": "6gD6ceLnohQVr8plAMCtyy7T2k82",
       "instructorName": "Leeja Shrestha",
-      "image": "http://localhost:3000/uploads/images/1758732887209-119927224.jpg",
+      "image": "https://uplearn-backend-e08l.onrender.com/uploads/images/1758732887209-119927224.jpg",
       "topics": [
         1758103780349
       ],
@@ -37,7 +37,7 @@
       "price": 0,
       "instructorId": "6gD6ceLnohQVr8plAMCtyy7T2k82",
       "instructorName": "Leeja Shrestha",
-      "image": "http://localhost:3000/uploads/images/1758104754897-539136967.jpg",
+      "image": "https://uplearn-backend-e08l.onrender.com/uploads/images/1758104754897-539136967.jpg",
       "topics": [
         1758104755007,
         1758104755008,
@@ -70,7 +70,7 @@
       "price": 0,
       "instructorId": "6gD6ceLnohQVr8plAMCtyy7T2k82",
       "instructorName": "Leeja Shrestha",
-      "image": "http://localhost:3000/uploads/images/1758248542654-745725077.png",
+      "image": "https://uplearn-backend-e08l.onrender.com/uploads/images/1758248542654-745725077.png",
       "topics": [
         1758248542691
       ],
@@ -140,7 +140,7 @@
       "price": 100,
       "instructorId": "6gD6ceLnohQVr8plAMCtyy7T2k82",
       "instructorName": "Leeja Shrestha",
-      "image": "http://localhost:3000/uploads/images/1758733123973-8786282.webp",
+      "image": "https://uplearn-backend-e08l.onrender.com/uploads/images/1758732887209-119927224.jpg",
       "topics": [
         1758272380456
       ],
@@ -171,7 +171,7 @@
       "price": 0,
       "instructorId": "6gD6ceLnohQVr8plAMCtyy7T2k82",
       "instructorName": "Leeja Shrestha",
-      "image": "http://localhost:3000/uploads/images/1758733477418-876120662.jpg",
+      "image": "https://uplearn-backend-e08l.onrender.com/uploads/images/1758732887209-119927224.jpg",
       "topics": [
         1758001186742
       ],
@@ -199,7 +199,7 @@
       "price": 0,
       "instructorId": "6gD6ceLnohQVr8plAMCtyy7T2k82",
       "instructorName": "Leeja Shrestha",
-      "image": "http://localhost:3000/uploads/images/1758733224402-384674213.png",
+      "image": "https://uplearn-backend-e08l.onrender.com/uploads/images/1758732887209-119927224.jpg",
       "topics": [
         1758441966976
       ],
@@ -229,7 +229,7 @@
       "price": 5000,
       "instructorId": "6gD6ceLnohQVr8plAMCtyy7T2k82",
       "instructorName": "Sohan",
-      "image": "http://localhost:3000/uploads/images/1758735497244-894926368.jpeg",
+      "image": "https://uplearn-backend-e08l.onrender.com/uploads/images/1758732887209-119927224.jpg",
       "topics": [
         1758735497323
       ],
@@ -259,7 +259,7 @@
       "price": 100,
       "instructorId": "6gD6ceLnohQVr8plAMCtyy7T2k82",
       "instructorName": "Leeja Shrestha",
-      "image": "http://localhost:3000/uploads/images/1758778033920-136359613.jpeg",
+      "image": "https://uplearn-backend-e08l.onrender.com/uploads/images/1758732887209-119927224.jpg",
       "topics": [
         1758778033997
       ],
