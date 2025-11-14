@@ -290,14 +290,14 @@
       "title": "Introduction to Java",
       "files": [
         {
-          "name": "John Doe-certificate (1).pdf",
-          "path": "http://localhost:3000/uploads/1758001186693.pdf",
+          "name": "flutter_tutorial.pdf",
+          "path": "https://uplearn-backend-e08l.onrender.com/uploads/docs/1758732887233-881393300.pdf",
           "type": "application/pdf",
           "size": 256044,
           "uploadedAt": "2025-09-24T17:04:37.423Z"
         }
       ],
-      "video": "http://localhost:3000/uploads/1758001186697.mp4",
+      "video": "https://uplearn-backend-e08l.onrender.com/uploads/videos/1758732887246-306646549.mov",
       "quiz": {
         "pass": false,
         "questions": [
@@ -325,13 +325,13 @@
       "files": [
         {
           "name": "flutter_tutorial.pdf",
-          "path": "http://localhost:3000/uploads/docs/1758732887233-881393300.pdf",
+          "path": "https://uplearn-backend-e08l.onrender.com/uploads/docs/1758732887233-881393300.pdf",
           "type": "application/pdf",
           "size": 3521913,
           "uploadedAt": "2025-09-24T16:54:47.295Z"
         }
       ],
-      "video": "http://localhost:3000/uploads/videos/1758732887246-306646549.mp4",
+      "video": "https://uplearn-backend-e08l.onrender.com/uploads/videos/1758732887246-306646549.mov",
       "quiz": {
         "pass": false,
         "questions": [
@@ -357,14 +357,14 @@
       "description": "Learn the basics of Angular, its architecture, and how it simplifies building modern web applications.",
       "files": [
         {
-          "name": "BLS_Training_Event_Report.pdf",
-          "path": "http://localhost:3000/uploads/docs/1758104754899-862102392.pdf",
+          "name": "flutter_tutorial.pdf",
+          "path": "https://uplearn-backend-e08l.onrender.com/uploads/docs/1758732887233-881393300.pdf",
           "type": "application/pdf",
           "size": 3192,
           "uploadedAt": "2025-09-17T10:25:55.007Z"
         }
       ],
-      "video": "http://localhost:3000/uploads/videos/1758104754899-399464392.mp4",
+      "video": "https://uplearn-backend-e08l.onrender.com/uploads/videos/1758732887246-306646549.mov",
       "quiz": {
         "pass": false,
         "questions": [
@@ -479,14 +479,14 @@
       "description": "Understand how to create reusable components and design interactive templates with data binding.",
       "files": [
         {
-          "name": "BLS_Training_Event_Report.pdf",
-          "path": "http://localhost:3000/uploads/docs/1758104754934-239044849.pdf",
+          "name": "flutter_tutorial.pdf",
+          "path": "https://uplearn-backend-e08l.onrender.com/uploads/docs/1758732887233-881393300.pdf",
           "type": "application/pdf",
           "size": 3192,
           "uploadedAt": "2025-09-17T10:25:55.007Z"
         }
       ],
-      "video": "http://localhost:3000/uploads/videos/1758104754935-621093841.mp4",
+      "video": "https://uplearn-backend-e08l.onrender.com/uploads/videos/1758732887246-306646549.mov",
       "quiz": {
         "pass": false,
         "questions": [
@@ -511,14 +511,14 @@
       "description": "Explore Angular’s built-in directives and pipes to manipulate DOM elements and transform data.",
       "files": [
         {
-          "name": "BLS_Training_Event_Report.pdf",
-          "path": "http://localhost:3000/uploads/docs/1758104754959-988879844.pdf",
+          "name": "flutter_tutorial.pdf",
+          "path": "https://uplearn-backend-e08l.onrender.com/uploads/docs/1758732887233-881393300.pdf",
           "type": "application/pdf",
           "size": 3192,
           "uploadedAt": "2025-09-17T10:25:55.007Z"
         }
       ],
-      "video": "http://localhost:3000/uploads/videos/1758104754959-684438801.mp4",
+      "video": "https://uplearn-backend-e08l.onrender.com/uploads/videos/1758732887246-306646549.mov",
       "quiz": {
         "pass": false,
         "questions": [
@@ -543,28 +543,28 @@
       "description": "Learn how to use services for data sharing and apply dependency injection to manage application logic efficiently.",
       "files": [
         {
-          "name": "Event_Report.pdf",
-          "path": "http://localhost:3000/uploads/docs/1758104754980-954461414.pdf",
+          "name": "flutter_tutorial.pdf",
+          "path": "https://uplearn-backend-e08l.onrender.com/uploads/docs/1758732887233-881393300.pdf",
           "type": "application/pdf",
           "size": 3192,
           "uploadedAt": "2025-09-17T10:25:55.007Z"
         },
         {
-          "name": "Event_Report.pdf",
-          "path": "http://localhost:3000/uploads/docs/1758104754980-954461414.pdf",
+          "name": "flutter_tutorial.pdf",
+          "path": "https://uplearn-backend-e08l.onrender.com/uploads/docs/1758732887233-881393300.pdf",
           "type": "application/pdf",
           "size": 3192,
           "uploadedAt": "2025-09-17T10:25:55.007Z"
         },
         {
-          "name": "Event_Report.pdf",
-          "path": "http://localhost:3000/uploads/docs/1758104754980-954461414.pdf",
+          "name": "flutter_tutorial.pdf",
+          "path": "https://uplearn-backend-e08l.onrender.com/uploads/docs/1758732887233-881393300.pdf",
           "type": "application/pdf",
           "size": 3192,
           "uploadedAt": "2025-09-17T10:25:55.007Z"
         }
       ],
-      "video": "http://localhost:3000/uploads/videos/1758104754981-738825905.mp4",
+      "video": "https://uplearn-backend-e08l.onrender.com/uploads/videos/1758732887246-306646549.mov",
       "quiz": {
         "pass": false,
         "questions": [
@@ -589,14 +589,14 @@
       "description": "Understand components, JSX, props, and state in React. Learn how to create functional and class-based components.",
       "files": [
         {
-          "name": "BLS_Training_Event_Report.pdf",
+          "name": "flutter_tutorial.pdf",
           "path": "http://localhost:3000/uploads/docs/1758248542656-794253162.pdf",
           "type": "application/pdf",
           "size": 3192,
           "uploadedAt": "2025-09-19T02:22:22.690Z"
         }
       ],
-      "video": "http://localhost:3000/uploads/videos/1758248542656-787338344.mp4",
+      "video": "https://uplearn-backend-e08l.onrender.com/uploads/videos/1758732887246-306646549.mov",
       "quiz": {
         "pass": false,
         "questions": [
@@ -662,14 +662,14 @@
       "description": "Learners will explore the core concepts of Vue.js, including its declarative rendering and data binding features. The topic also introduces the Vue instance and its role in managing application state.",
       "files": [
         {
-          "name": "John Doe-certificate (1).pdf",
-          "path": "http://localhost:3000/uploads/docs/1758444179642-270433423.pdf",
+          "name": "flutter_tutorial.pdf",
+          "path": "https://uplearn-backend-e08l.onrender.com/uploads/docs/1758732887233-881393300.pdf",
           "type": "application/pdf",
           "size": 256044,
           "uploadedAt": "2025-09-21T08:42:59.645Z"
         }
       ],
-      "video": "http://localhost:3000/uploads/videos/1758272380399-890104505.mp4",
+      "video": "https://uplearn-backend-e08l.onrender.com/uploads/videos/1758732887246-306646549.mov",
       "quiz": {
         "pass": false,
         "questions": [
@@ -695,14 +695,14 @@
       "description": "In this topic, students learn about Node.js’s event-driven, non-blocking I/O model and how it enables building efficient server-side applications. They will also explore npm for package management.",
       "files": [
         {
-          "name": "John Doe-certificate.pdf",
-          "path": "http://localhost:3000/uploads/docs/1758454831828-895036353.pdf",
+          "name": "flutter_tutorial.pdf",
+          "path": "https://uplearn-backend-e08l.onrender.com/uploads/docs/1758732887233-881393300.pdf",
           "type": "application/pdf",
           "size": 256044,
           "uploadedAt": "2025-09-21T11:40:31.833Z"
         }
       ],
-      "video": "http://localhost:3000/uploads/videos/1758442015847-352272613.mp4",
+      "video": "https://uplearn-backend-e08l.onrender.com/uploads/videos/1758732887246-306646549.mov",
       "quiz": {
         "pass": false,
         "questions": [
@@ -729,13 +729,13 @@
       "files": [
         {
           "name": "flutter_tutorial.pdf",
-          "path": "http://localhost:3000/uploads/docs/1758735497244-171883180.pdf",
+          "path": "https://uplearn-backend-e08l.onrender.com/uploads/docs/1758732887233-881393300.pdf",
           "type": "application/pdf",
           "size": 3521913,
           "uploadedAt": "2025-09-24T17:38:17.323Z"
         }
       ],
-      "video": "http://localhost:3000/uploads/videos/1758735497259-57863567.mp4",
+      "video": "https://uplearn-backend-e08l.onrender.com/uploads/videos/1758732887246-306646549.mov",
       "quiz": {
         "pass": false,
         "questions": [
@@ -761,13 +761,13 @@
       "files": [
         {
           "name": "flutter_tutorial.pdf",
-          "path": "http://localhost:3000/uploads/docs/1758778033921-797207476.pdf",
+          "path": "https://uplearn-backend-e08l.onrender.com/uploads/docs/1758732887233-881393300.pdf",
           "type": "application/pdf",
           "size": 3521913,
           "uploadedAt": "2025-09-25T05:27:13.997Z"
         }
       ],
-      "video": "http://localhost:3000/uploads/videos/1758778033939-49432502.mp4",
+      "video": "https://uplearn-backend-e08l.onrender.com/uploads/videos/1758732887246-306646549.mov",
       "quiz": {
         "pass": false,
         "questions": [
