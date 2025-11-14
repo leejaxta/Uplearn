@@ -5,7 +5,7 @@
       "title": "Flutter",
       "description": "Flutter is Google’s open-source UI toolkit for building natively compiled applications for mobile, web, and desktop from a single codebase. It uses the Dart programming language and provides fast development with a rich set of customizable widgets.",
       "price": 1000,
-      "instructorId": "p7b1pC62qpfRSpgFU8xkiMm3Fgm2",
+      "instructorId": "6gD6ceLnohQVr8plAMCtyy7T2k82",
       "instructorName": "Leeja Shrestha",
       "image": "http://localhost:3000/uploads/images/1758732887209-119927224.jpg",
       "topics": [
@@ -35,7 +35,7 @@
       "title": "Angular",
       "description": "This course introduces Angular, a powerful framework for building modern, dynamic, and responsive web applications. You’ll learn key concepts like components, data binding, services, and routing through practical examples.",
       "price": 0,
-      "instructorId": "p7b1pC62qpfRSpgFU8xkiMm3Fgm2",
+      "instructorId": "6gD6ceLnohQVr8plAMCtyy7T2k82",
       "instructorName": "Leeja Shrestha",
       "image": "http://localhost:3000/uploads/images/1758104754897-539136967.jpg",
       "topics": [
@@ -68,7 +68,7 @@
       "title": "React",
       "description": "This course introduces you to the fundamentals of React, helping you understand how to build dynamic user interfaces. You will learn about components, state management, and props to create interactive web applications. By the end of the course, you will be able to build and deploy a simple React project with confidence.",
       "price": 0,
-      "instructorId": "p7b1pC62qpfRSpgFU8xkiMm3Fgm2",
+      "instructorId": "6gD6ceLnohQVr8plAMCtyy7T2k82",
       "instructorName": "Leeja Shrestha",
       "image": "http://localhost:3000/uploads/images/1758248542654-745725077.png",
       "topics": [
@@ -138,7 +138,7 @@
       "title": "Vue",
       "description": "This course covers Vue.js, a progressive JavaScript framework for building user interfaces. Learners will understand its reactivity system, component-based structure, and how it simplifies modern web development.",
       "price": 100,
-      "instructorId": "p7b1pC62qpfRSpgFU8xkiMm3Fgm2",
+      "instructorId": "6gD6ceLnohQVr8plAMCtyy7T2k82",
       "instructorName": "Leeja Shrestha",
       "image": "http://localhost:3000/uploads/images/1758733123973-8786282.webp",
       "topics": [
@@ -169,7 +169,7 @@
       "title": "Java",
       "description": "This course provides a foundation in Java, a widely used object-oriented programming language. Students will learn to build robust, portable, and secure applications.",
       "price": 0,
-      "instructorId": "p7b1pC62qpfRSpgFU8xkiMm3Fgm2",
+      "instructorId": "6gD6ceLnohQVr8plAMCtyy7T2k82",
       "instructorName": "Leeja Shrestha",
       "image": "http://localhost:3000/uploads/images/1758733477418-876120662.jpg",
       "topics": [
@@ -197,7 +197,7 @@
       "title": "Node",
       "description": "This course introduces Node.js, a runtime environment that allows developers to run JavaScript on the server side. Learners will build scalable and fast backend applications using Node.js and its ecosystem.",
       "price": 0,
-      "instructorId": "p7b1pC62qpfRSpgFU8xkiMm3Fgm2",
+      "instructorId": "6gD6ceLnohQVr8plAMCtyy7T2k82",
       "instructorName": "Leeja Shrestha",
       "image": "http://localhost:3000/uploads/images/1758733224402-384674213.png",
       "topics": [
@@ -227,7 +227,7 @@
       "title": "Django",
       "description": "This course introduces Django, a high-level Python web framework that promotes rapid development and clean, pragmatic design. Students will learn to build secure, scalable, and maintainable web applications.",
       "price": 5000,
-      "instructorId": "b2Pd1nwKKkT4lNrlCmdyxJc73qK2",
+      "instructorId": "6gD6ceLnohQVr8plAMCtyy7T2k82",
       "instructorName": "Sohan",
       "image": "http://localhost:3000/uploads/images/1758735497244-894926368.jpeg",
       "topics": [
@@ -257,7 +257,7 @@
       "title": "SQL & Databases",
       "description": "This course covers SQL, the standard language for managing and querying relational databases. Learners will gain practical experience in creating, modifying, and retrieving data from databases.",
       "price": 100,
-      "instructorId": "p7b1pC62qpfRSpgFU8xkiMm3Fgm2",
+      "instructorId": "6gD6ceLnohQVr8plAMCtyy7T2k82",
       "instructorName": "Leeja Shrestha",
       "image": "http://localhost:3000/uploads/images/1758778033920-136359613.jpeg",
       "topics": [
