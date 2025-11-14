@@ -183,7 +183,7 @@ server.put(
 
         let filePath;
         if (file.mimetype.startsWith("image/")) {
-          filePath = 'https://uplearn-backend-e08l.onrender.com/uploads/images/${file.filename}`;
+        filePath = `https://uplearn-backend-e08l.onrender.com/uploads/images/${file.filename}`;
         } else if (file.mimetype.startsWith("video/")) {
           filePath = `https://uplearn-backend-e08l.onrender.com/uploads/videos/${file.filename}`;
         } else {
